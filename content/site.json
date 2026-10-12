@@ -1,0 +1,273 @@
+{
+  "brand": {
+    "name": "Outside The Lines Studio",
+    "instagram": "outsidethelinesandbanks"
+  },
+  "hero": {
+    "eyebrow": "handmade in timber and resin",
+    "line1": "Made by hand.",
+    "line2": "Never the same twice.",
+    "lead": "Serving boards, platters, coasters and wine glasses in the Ocean, Mountain and Lava ranges. Choose a piece, ask to see photos of what is in stock, and pay by a secure link when you have decided."
+  },
+  "about": {
+    "name": "Amanda Gratwick",
+    "photo": "",
+    "p1": "I’m Amanda Gratwick, the maker behind Outside The Lines Studio. I make serving boards, platters, coasters and wine glasses by hand, finished in one of three ranges: Ocean, Mountain or Lava.",
+    "p2": "No two pieces match. The timber, the colour and the edges change from one piece to the next, so you can choose from what is in stock or ask me for photos first.",
+    "p3": "[A few lines on how you started, where you work and what you enjoy most about making each piece.]"
+  },
+  "ordering": {
+    "title": "How ordering works",
+    "intro": "Every piece is different, so you choose from photos of what is in stock.",
+    "steps": [
+      {
+        "title": "Choose a piece",
+        "text": "Browse the shop and pick the type, shape, size and range you like."
+      },
+      {
+        "title": "Request photos",
+        "text": "Send a request and we reply with photos of the pieces in stock for that type."
+      },
+      {
+        "title": "Pay by secure link",
+        "text": "When you have chosen, we send a secure payment link. You pay by card, Apple Pay or Google Pay."
+      },
+      {
+        "title": "We pack and post",
+        "text": "[Amanda to confirm packing, delivery times and delivery costs.]"
+      }
+    ]
+  },
+  "ranges": {
+    "ocean": {
+      "name": "Ocean",
+      "blurb": "Teals and deep blues with white wave lines."
+    },
+    "mountain": {
+      "name": "Mountain",
+      "blurb": "Layered blue ridges in pale resin."
+    },
+    "lava": {
+      "name": "Lava",
+      "blurb": "Black resin with glowing orange veins."
+    }
+  },
+  "images": {
+    "hero": "img/trio.jpg",
+    "heroCorner": "img/detail.jpg",
+    "ocean": "img/board.jpg",
+    "mountain": "",
+    "lava": "",
+    "edgeResin": "img/edge.jpg",
+    "edgeClean": "img/board.jpg"
+  },
+  "types": [
+    {
+      "key": "boards",
+      "name": "Serving boards with handles",
+      "short": "Serving board",
+      "blurb": "Timber boards with a handle, in irregular and round shapes, each finished with a resin wave.",
+      "ranges": true,
+      "edges": true,
+      "tileKind": "board_long",
+      "tileRange": "ocean",
+      "photo": "img/detail.jpg",
+      "shapes": [
+        {
+          "id": "irregular",
+          "name": "Irregular",
+          "kind": "board_long",
+          "sizes": [
+            {
+              "label": "35cm",
+              "price": 70
+            },
+            {
+              "label": "45cm",
+              "price": 125
+            }
+          ]
+        },
+        {
+          "id": "round",
+          "name": "Round handled",
+          "kind": "board_round",
+          "sizes": [
+            {
+              "label": "33cm",
+              "price": 115
+            },
+            {
+              "label": "46cm",
+              "price": 150
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "platters",
+      "name": "Serving platters",
+      "short": "Serving platter",
+      "blurb": "Larger platters for sharing, in irregular and rustic shapes.",
+      "ranges": true,
+      "edges": true,
+      "tileKind": "platter_oval",
+      "tileRange": "ocean",
+      "photo": "img/trio.jpg",
+      "shapes": [
+        {
+          "id": "irregular",
+          "name": "Irregular",
+          "kind": "platter_oval",
+          "sizes": [
+            {
+              "label": "35cm",
+              "price": 115
+            },
+            {
+              "label": "50cm",
+              "price": 150
+            }
+          ]
+        },
+        {
+          "id": "rustic",
+          "name": "Rustic",
+          "kind": "platter_rect",
+          "sizes": [
+            {
+              "label": "30cm",
+              "price": 70
+            },
+            {
+              "label": "45cm",
+              "price": 125
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "coasters",
+      "name": "Coasters",
+      "short": "Coasters",
+      "blurb": "Sold in sets of four, cut from the same piece so the pattern runs across the set.",
+      "ranges": true,
+      "edges": true,
+      "tileKind": "coaster_round",
+      "tileRange": "ocean",
+      "photo": "",
+      "shapes": [
+        {
+          "id": "round",
+          "name": "Round",
+          "kind": "coaster_round",
+          "sizes": [
+            {
+              "label": "Set of 4",
+              "price": 50
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "glasses",
+      "name": "Wine glasses",
+      "short": "Wine glass",
+      "blurb": "Hand finished wine glasses, stemmed or stemless.",
+      "ranges": false,
+      "edges": false,
+      "tileKind": "glass_stem",
+      "tileRange": "ocean",
+      "photo": "",
+      "shapes": [
+        {
+          "id": "stem",
+          "name": "Stemmed",
+          "kind": "glass_stem",
+          "sizes": [
+            {
+              "label": "Single glass",
+              "price": 24
+            },
+            {
+              "label": "Pair",
+              "price": 44
+            }
+          ]
+        },
+        {
+          "id": "stemless",
+          "name": "Stemless",
+          "kind": "glass_stemless",
+          "sizes": [
+            {
+              "label": "Single glass",
+              "price": 20
+            },
+            {
+              "label": "Pair",
+              "price": 36
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How do I order?",
+      "a": "Choose a piece, request photos of what is in stock, and tell us which one you would like. We then send a secure payment link and post your piece once it is paid."
+    },
+    {
+      "q": "Is every piece different?",
+      "a": "Yes. Every piece is handmade, so the timber, the colours and the shape of the resin change from one to the next. The photos on the site show examples of each type."
+    },
+    {
+      "q": "How can I see what is currently in stock?",
+      "a": "Use the request photos button on any product, or the one at the top of the page. Tell us the type, shape and size you want and we will send photos of what is in stock for that type of piece."
+    },
+    {
+      "q": "What is the difference between resin edges and clean edges?",
+      "a": "Some pieces have resin running down the edges as well as through the middle. Others are clean all the way round, with timber edges and the resin kept to the surface. You can choose a preference when you order."
+    },
+    {
+      "q": "What are the Ocean, Mountain and Lava ranges?",
+      "a": "Ocean pieces use teals and deep blues with white wave lines. Mountain pieces have layered blue ridges. Lava pieces have black resin with glowing orange veins. [Amanda to confirm which products come in which ranges.]"
+    },
+    {
+      "q": "Which payment methods do you accept?",
+      "a": "When you have chosen a piece we send a secure payment link. You can pay by card, Apple Pay or Google Pay. [Amanda to confirm.]"
+    },
+    {
+      "q": "Can I use my board or platter for food?",
+      "a": "[Amanda to confirm what the pieces are finished with and how they can be used with food.]"
+    },
+    {
+      "q": "How do I look after my piece?",
+      "a": "[Amanda to add care guidance, for example cleaning, drying and re-oiling, and what to avoid.]"
+    },
+    {
+      "q": "Can I order a custom size, shape or colour?",
+      "a": "[Amanda to confirm whether custom and commission orders are available, and how long they take.]"
+    },
+    {
+      "q": "Do you offer gift wrapping?",
+      "a": "[Amanda to confirm gift wrapping options and any extra cost.]"
+    },
+    {
+      "q": "How much is delivery and how long does it take?",
+      "a": "[Amanda to add delivery areas, costs, courier and typical delivery times.]"
+    },
+    {
+      "q": "What if my order arrives damaged or I change my mind?",
+      "a": "[Amanda to add the returns and damage policy.]"
+    },
+    {
+      "q": "Can I collect in person?",
+      "a": "[Amanda to confirm whether collection is available and where.]"
+    }
+  ]
+}

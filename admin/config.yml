@@ -1,0 +1,122 @@
+backend:
+  name: github
+  repo: emilyidili/outside-the-lines   # replace OWNER with the GitHub account that holds the repo
+  branch: main
+  base_url: https://api.netlify.com   # Netlify OAuth provider (set up in Netlify: Site settings, Access control, OAuth)
+  auth_endpoint: auth
+
+site_url: https://outsidethelines.uk
+display_url: https://outsidethelines.uk
+
+media_folder: img/uploads
+public_folder: /img/uploads
+
+collections:
+  - name: site
+    label: Website content
+    files:
+      - name: content
+        label: All pages
+        file: content/site.json
+        format: json
+        fields:
+          - label: Brand
+            name: brand
+            widget: object
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Instagram handle, name: instagram, widget: string }
+          - label: Home page intro
+            name: hero
+            widget: object
+            fields:
+              - { label: Small line above title, name: eyebrow, widget: string }
+              - { label: Title line 1, name: line1, widget: string }
+              - { label: Title line 2, name: line2, widget: string }
+              - { label: Intro text, name: lead, widget: text }
+          - label: About page
+            name: about
+            widget: object
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Photo, name: photo, widget: image, required: false }
+              - { label: Paragraph 1, name: p1, widget: text }
+              - { label: Paragraph 2, name: p2, widget: text }
+              - { label: Paragraph 3, name: p3, widget: text }
+          - label: How ordering works
+            name: ordering
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Intro, name: intro, widget: text }
+              - label: Steps
+                name: steps
+                widget: list
+                fields:
+                  - { label: Step title, name: title, widget: string }
+                  - { label: Step text, name: text, widget: text }
+          - label: Ranges
+            name: ranges
+            widget: object
+            fields:
+              - label: Ocean
+                name: ocean
+                widget: object
+                fields:
+                  - { label: Name, name: name, widget: string }
+                  - { label: Description, name: blurb, widget: text }
+              - label: Mountain
+                name: mountain
+                widget: object
+                fields:
+                  - { label: Name, name: name, widget: string }
+                  - { label: Description, name: blurb, widget: text }
+              - label: Lava
+                name: lava
+                widget: object
+                fields:
+                  - { label: Name, name: name, widget: string }
+                  - { label: Description, name: blurb, widget: text }
+          - label: Photos
+            name: images
+            widget: object
+            fields:
+              - { label: Home page main photo, name: hero, widget: image, required: false }
+              - { label: Home page small photo, name: heroCorner, widget: image, required: false }
+              - { label: Ocean range photo, name: ocean, widget: image, required: false }
+              - { label: Mountain range photo, name: mountain, widget: image, required: false }
+              - { label: Lava range photo, name: lava, widget: image, required: false }
+              - { label: Resin edge photo, name: edgeResin, widget: image, required: false }
+              - { label: Clean edge photo, name: edgeClean, widget: image, required: false }
+          - label: Shop product types
+            name: types
+            widget: list
+            fields:
+              - { label: Key (do not change), name: key, widget: string }
+              - { label: Name, name: name, widget: string }
+              - { label: Short line, name: short, widget: string }
+              - { label: Description, name: blurb, widget: text }
+              - { label: Has Ocean, Mountain, Lava ranges, name: ranges, widget: boolean, required: false }
+              - { label: Has resin or clean edge options, name: edges, widget: boolean, required: false }
+              - { label: Tile picture style, name: tileKind, widget: string, required: false }
+              - { label: Tile range, name: tileRange, widget: string, required: false }
+              - { label: Photo, name: photo, widget: image, required: false }
+              - label: Shapes
+                name: shapes
+                widget: list
+                fields:
+                  - { label: Id (do not change), name: id, widget: string }
+                  - { label: Name, name: name, widget: string }
+                  - { label: Picture style, name: kind, widget: string }
+                  - label: Sizes
+                    name: sizes
+                    widget: list
+                    fields:
+                      - { label: Size, name: label, widget: string }
+                      - { label: Price in pounds, name: price, widget: number, value_type: int }
+          - label: FAQs
+            name: faqs
+            widget: list
+            fields:
+              - { label: Question, name: q, widget: string }
+              - { label: Answer, name: a, widget: text }
