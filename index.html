@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Outside The Lines Studio | Handmade resin serving boards, platters and coasters</title>
-<meta name="description" content="Handmade timber and resin serving boards, platters, coasters and wine glasses in Ocean, Mountain and Lava ranges. Every piece is different. Request photos of what is in stock.">
+<meta name="description" content="Handmade timber and resin serving boards, platters, coasters and wine glasses in Ocean, Mountain and Lava ranges. Every piece is different. Choose your edge finish and order online.">
 <meta property="og:title" content="Outside The Lines Studio">
 <meta property="og:description" content="Handmade timber and resin serving boards, platters, coasters and wine glasses. Every piece is different.">
 <meta property="og:type" content="website">
@@ -268,7 +268,6 @@ footer.site{margin-top:0}
       <a href="#about" data-go="about" data-nav="about">About</a>
       <a href="#faqs" data-go="faqs" data-nav="faqs">FAQs</a>
     </nav>
-    <button class="btn" type="button" data-req-general>Request photos</button>
   </div>
 </header>
 
@@ -283,15 +282,14 @@ footer.site{margin-top:0}
       <a href="#shop" data-go="shop">Shop</a>
       <a href="#about" data-go="about">About</a>
       <a href="#faqs" data-go="faqs">FAQs</a>
-      <button type="button" class="linklike" data-req-general>Ask about stock</button>
       <a id="foot-insta" href="https://www.instagram.com/outsidethelinesandbanks/" target="_blank" rel="noopener">Instagram</a>
     </nav>
     <span class="muted">outsidethelines.uk</span>
   </div>
 </footer>
 
-<form name="request" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
-  <input type="hidden" name="form-name" value="request">
+<form name="order" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input type="hidden" name="form-name" value="order">
   <input name="bot-field"><input name="name"><input name="email">
   <textarea name="item"></textarea><input name="finish"><textarea name="note"></textarea>
 </form>
@@ -299,16 +297,15 @@ footer.site{margin-top:0}
 <div id="modal" class="overlay center" hidden>
   <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="m-title">
     <div class="dialog-head">
-      <h2 id="m-title" style="font-size:1.6rem">Request photos of current stock</h2>
+      <h2 id="m-title" style="font-size:1.6rem">Order this piece</h2>
       <button class="x" type="button" data-close aria-label="Close">&times;</button>
     </div>
     <form id="reqForm" novalidate>
       <div style="display:grid;gap:14px">
-        <p class="muted">Every piece is different. Tell us what you are after and we will email photos of what is in stock for that type of product. If you choose one, we send a secure payment link.</p>
+        <p class="muted">Send your details and we will email you a secure payment link. Every piece is handmade, so there may be small differences from the illustration.</p>
         <div class="field"><label for="rq-item">Product</label><textarea class="inp" id="rq-item" rows="3" readonly></textarea></div>
         <div class="field" id="rq-finish-wrap"><label for="rq-finish">Edge finish</label>
           <select class="sel" id="rq-finish">
-            <option value="none">Show me both</option>
             <option value="resin">Resin edges</option>
             <option value="clean">Clean all round</option>
           </select>
@@ -317,12 +314,12 @@ footer.site{margin-top:0}
         <div class="field"><label for="rq-email">Email</label><input class="inp" id="rq-email" type="email" autocomplete="email"></div>
         <div class="field"><label for="rq-note">Anything else</label><textarea class="inp" id="rq-note" rows="3"></textarea></div>
         <p class="err" id="rq-err" role="alert" hidden></p>
-        <button class="btn primary" id="rq-send" type="submit">Send request</button>
+        <button class="btn primary" id="rq-send" type="submit">Send order</button>
       </div>
     </form>
     <div id="rq-done" hidden style="display:grid;gap:12px">
-      <h3>Request sent</h3>
-      <p>Thank you. We will email you photos of what is in stock, usually within [Amanda to confirm reply time].</p>
+      <h3>Order received</h3>
+      <p>Thank you. We will email you a secure payment link, usually within [Amanda to confirm reply time]. Your piece is posted once it is paid.</p>
       <button class="btn" type="button" data-close>Close</button>
     </div>
   </div>
@@ -413,7 +410,7 @@ footer.site{margin-top:0}
 
   var ROUTES=['home','shop','boards','platters','coasters','glasses','about','faqs'];
   var RKEYS=['ocean','mountain','lava'];
-  var FINISH={none:{name:'No preference',line:'Edge: no preference'},resin:{name:'Resin edges',line:'Edge: resin edges'},clean:{name:'Clean all round',line:'Edge: clean all round'}};
+  var FINISH={resin:{name:'Resin edges',line:'Edge: resin edges'},clean:{name:'Clean all round',line:'Edge: clean all round'}};
   var SITE=null,ORDER=[];
   var state={route:'home',range:'ocean'},sel={};
   var view=document.getElementById('view');
@@ -425,7 +422,7 @@ footer.site{margin-top:0}
   function firstName(){return String(SITE.about.name||'').trim().split(/\s+/)[0]||'';}
   function igUrl(){return 'https://www.instagram.com/'+encodeURIComponent(String(SITE.brand.instagram||'').replace(/^@/,''))+'/';}
   function igText(){return '@'+String(SITE.brand.instagram||'').replace(/^@/,'');}
-  function selFor(key){return sel[key]||(sel[key]={size:0,finish:'none'});}
+  function selFor(key){return sel[key]||(sel[key]={size:0,finish:'resin'});}
   function parts(key){var a=key.split(':'),t=T(a[0]);return{t:t,s:t?t.shapes.filter(function(x){return x.id===a[1];})[0]:null};}
   function describe(key){
     var p=parts(key),st=selFor(key),size=p.s.sizes[st.size]||p.s.sizes[0],extra=[];
@@ -434,7 +431,10 @@ footer.site{margin-top:0}
     return p.t.short+', '+p.s.name+', '+size.label+(extra.length?'. '+extra.join('. '):'')+'. Guide price '+GBP(size.price)+'.';
   }
 
-  function ph(src,alt){return '<div class="tile photo"><img src="'+esc(src)+'" alt="'+esc(alt)+'" loading="lazy"></div>';}
+  /* Netlify Image CDN resizes large uploads to a sensible width; falls back to the original file if the CDN is not available */
+  function rs(src,w){if(!src||/^https?:/.test(src))return esc(src||'');var u=src.charAt(0)==='/'?src:'/'+src;return '/.netlify/images?url='+encodeURIComponent(u)+'&w='+w+'&q=80';}
+  function fb(src){return ' onerror="this.onerror=null;this.src=\''+esc(src)+'\'"';}
+  function ph(src,alt){return '<div class="tile photo"><img src="'+rs(src,900)+'"'+fb(src)+' alt="'+esc(alt)+'" loading="lazy"></div>';}
   function tileFor(t){return t.photo?ph(t.photo,t.name):'<div class="tile">'+art(t.tileKind,t.tileRange||'ocean','none')+'</div>';}
   function rangeTile(k){var p=SITE.images[k];return p?ph(p,RG(k).name+' range'):'<div class="tile">'+art('board_round',k,'none')+'</div>';}
   function cardHTML(t,s){
@@ -451,7 +451,7 @@ footer.site{margin-top:0}
       Object.keys(FINISH).forEach(function(k){h+='<option value="'+k+'"'+(k===st.finish?' selected':'')+'>'+FINISH[k].name+'</option>';});
       h+='</select></div>';
     }
-    h+='<div class="actions"><button type="button" class="btn primary" data-req>Request this piece</button></div><p class="note">We reply with photos of what is in stock. Illustration shown, every piece differs.</p>';
+    h+='<div class="actions"><button type="button" class="btn primary" data-req>Order this piece</button></div><p class="note">We email you a secure payment link. Illustration shown, every piece differs.</p>';
     return h+'</div></article>';
   }
   function typeNav(cur){
@@ -462,10 +462,10 @@ footer.site{margin-top:0}
   function plain(inner){return '<section class="sec"><div class="wrap">'+inner+'</div></section>';}
   function heroHTML(){
     var H=SITE.hero,I=SITE.images;
-    var main=I.hero?'<img class="cover" src="'+esc(I.hero)+'" alt="Handmade boards with ocean resin waves">':'<div class="cover tile">'+art('board_round','ocean','resin')+'</div>';
-    var corner=I.heroCorner?'<img class="a2" src="'+esc(I.heroCorner)+'" alt="Close up of a board with a teal and white resin wave">':'';
+    var main=I.hero?'<img class="cover" src="'+rs(I.hero,1400)+'"'+fb(I.hero)+' alt="Handmade boards with ocean resin waves">':'<div class="cover tile">'+art('board_round','ocean','resin')+'</div>';
+    var corner=I.heroCorner?'<img class="a2" src="'+rs(I.heroCorner,700)+'"'+fb(I.heroCorner)+' alt="Close up of a board with a teal and white resin wave">':'';
     var h='<div class="hero"><div class="hero-copy"><p class="eyebrow">'+esc(H.eyebrow)+'</p><h1>'+esc(H.line1)+'<br><em>'+esc(H.line2)+'</em></h1><p class="lead">'+esc(H.lead)+'</p>'+
-      '<div class="cta"><a class="btn primary lg" href="#shop" data-go="shop">Shop the range</a><button type="button" class="btn lg" data-req-general>Request stock photos</button></div></div>'+
+      '<div class="cta"><a class="btn primary lg" href="#shop" data-go="shop">Shop the range</a></div></div>'+
       '<div class="hero-art"><div class="frame">'+main+corner+'</div></div></div>';
     return '<section class="band hero-band">'+LOGO+'<div class="wrap">'+h+'</div></section>';
   }
@@ -481,10 +481,9 @@ footer.site{margin-top:0}
     var ord='<div class="sec-head"><div><p class="eyebrow">ordering</p><h2>'+esc(O.title)+'</h2></div><p>'+esc(O.intro)+'</p></div><div class="steps">';
     O.steps.forEach(function(s,i){ord+='<div class="step"><span class="n">step '+(i+1)+'</span><h3>'+esc(s.title)+'</h3><p>'+rich(s.text)+'</p></div>';});
     h+=band('teal',ord+'</div>');
-    var ed='<div class="sec-head"><div><p class="eyebrow">every piece differs</p><h2>Resin edges or clean edges</h2></div><p>Some pieces have resin down the edges and some are clean all the way round. Say which you prefer, or request photos of what is in stock.</p></div><div class="compare">';
+    var ed='<div class="sec-head"><div><p class="eyebrow">every piece differs</p><h2>Resin edges or clean edges</h2></div><p>Choose resin edges or clean edges from the drop-down on any board or platter. You will see the choice in the product picture.</p></div><div class="compare">';
     ed+='<div class="link-tile" style="cursor:default"><div class="rbar bar-brand"></div>'+(SITE.images.edgeResin?ph(SITE.images.edgeResin,'Side of a board showing resin running down the edge'):'<div class="tile">'+art('board_rect','ocean','resin')+'</div>')+'<div class="tile-body"><h3>Resin edges</h3><p>Resin runs down the sides as well as through the middle.</p></div></div>';
     ed+='<div class="link-tile" style="cursor:default"><div class="rbar bar-brand"></div>'+(SITE.images.edgeClean?ph(SITE.images.edgeClean,'Board with natural timber edges and a resin wave at one end'):'<div class="tile">'+art('board_rect','ocean','clean')+'</div>')+'<div class="tile-body"><h3>Clean all round</h3><p>Timber edges all the way round, with the resin kept to the centre.</p></div></div>';
-    ed+='<div class="link-tile" style="cursor:default;justify-content:center"><div class="rbar bar-brand"></div><div class="tile-body"><h3>Not sure which?</h3><p>Ask for photos of what is in stock for the type of piece you want.</p><button type="button" class="btn primary" data-req-general>Request stock photos</button></div></div>';
     h+=plain(ed+'</div>');
     return h;
   }
@@ -504,22 +503,22 @@ footer.site{margin-top:0}
       h+='</div><p class="range-note">'+esc(RG(state.range).blurb)+'</p></div>';
     }
     h+='</div><div class="grid products" id="products">'+t.shapes.map(function(s){return cardHTML(t,s);}).join('')+'</div>';
-    h+='<div class="note-box">Each piece is one of a kind. Request the piece you like and we reply with photos of what is currently in stock for this shape and size. When you have chosen, we send a secure payment link.</div></div>';
+    h+='<div class="note-box">Each piece is handmade, so no two are identical. Choose your shape, size and edge finish, then order. We email you a secure payment link and post your piece once it is paid.</div></div>';
     return h;
   }
   function aboutHTML(){
     var p=SITE.about.photo;
-    var photo=p?'<div class="portrait has" style="background-image:url(\''+esc(p)+'\')" role="img" aria-label="Photo of '+esc(SITE.about.name)+'"></div>':
+    var photo=p?'<div class="portrait has" style="background-image:url(\''+rs(p,900)+'\')" role="img" aria-label="Photo of '+esc(SITE.about.name)+'"></div>':
       '<div class="portrait"><div class="portrait-ph"><span class="label">photo of '+esc(firstName())+' goes here</span></div></div>';
     var h='<div class="wrap body-pad"><section class="about" style="padding-block:clamp(44px,7vw,92px) 0"><div>'+photo+'<p class="cap">'+esc(SITE.about.name)+'</p></div><div class="about-copy"><p class="eyebrow">about</p><h1>Hello, I’m '+esc(firstName())+'.</h1>'+
       '<p>'+rich(SITE.about.p1)+'</p><p>'+rich(SITE.about.p2)+'</p><p>'+rich(SITE.about.p3)+'</p>'+
-      '<div class="cta"><a class="btn primary" href="#shop" data-go="shop">Shop the range</a><button type="button" class="btn" data-req-general>Request stock photos</button><a class="btn" href="'+igUrl()+'" target="_blank" rel="noopener">Follow '+esc(igText())+'</a></div></div></section></div>';
+      '<div class="cta"><a class="btn primary" href="#shop" data-go="shop">Shop the range</a><a class="btn" href="'+igUrl()+'" target="_blank" rel="noopener">Follow '+esc(igText())+'</a></div></div></section></div>';
     return band('page-band','<div class="page-head"><p class="eyebrow">about</p><h2 style="font-size:clamp(1.9rem,4.4vw,3rem)">The maker</h2></div>',LOGO)+'<div class="stripe"></div>'+h;
   }
   function faqsHTML(){
     var head='<div class="page-head"><p class="eyebrow">faqs</p><h1>Questions</h1><p>Answers to the questions we are asked most. If yours is not here, ask and we will get back to you.</p></div>';
     var list='<div class="faq">'+SITE.faqs.map(function(f){return '<details><summary>'+esc(f.q)+'</summary><div class="ans">'+rich(f.a)+'</div></details>';}).join('')+'</div>';
-    var cta='<div class="faq-cta"><h3>Still have a question?</h3><div class="cta"><button type="button" class="btn primary" data-req-general>Ask about stock</button><a class="btn" href="'+igUrl()+'" target="_blank" rel="noopener">Message '+esc(igText())+'</a></div></div>';
+    var cta='<div class="faq-cta"><h3>Still have a question?</h3><div class="cta"><a class="btn primary" href="'+igUrl()+'" target="_blank" rel="noopener">Message '+esc(igText())+'</a></div></div>';
     return band('page-band',head,LOGO)+'<div class="stripe"></div><div class="wrap body-pad"><div style="padding-top:clamp(28px,5vw,56px)">'+list+cta+'</div></div>';
   }
   function renderChrome(){
@@ -547,7 +546,7 @@ footer.site{margin-top:0}
     if(focusSel){var f=view.querySelector('.card[data-key="'+key+'"] '+focusSel);if(f)f.focus();}
   }
 
-  /* ---------- Request form (sent through Netlify Forms) ---------- */
+  /* ---------- Order form (sent through Netlify Forms) ---------- */
   var lastFocus=null,modal=document.getElementById('modal');
   function openModal(text,showFinish,finish){
     lastFocus=document.activeElement;
@@ -562,7 +561,7 @@ footer.site{margin-top:0}
   }
   function closeModal(){modal.hidden=true;if(lastFocus&&lastFocus.focus){try{lastFocus.focus();}catch(e){}}}
   document.addEventListener('click',function(e){
-    var el=e.target.closest('[data-go],[data-size],[data-req],[data-req-general],[data-range-pick],[data-close]');
+    var el=e.target.closest('[data-go],[data-size],[data-req],[data-range-pick],[data-close]');
     if(!el){if(e.target.id==='modal')closeModal();return;}
     var card=el.closest('.card'),key=card?card.dataset.key:null;
     if(el.hasAttribute('data-close')){closeModal();return;}
@@ -570,7 +569,6 @@ footer.site{margin-top:0}
     if(el.hasAttribute('data-size')){selFor(key).size=+el.dataset.size;refreshCard(key,'[data-size="'+el.dataset.size+'"]');return;}
     if(el.hasAttribute('data-range-pick')){state.range=el.dataset.rangePick;render();var b=view.querySelector('[data-range-pick="'+state.range+'"]');if(b)b.focus();return;}
     if(el.hasAttribute('data-req')){var p=parts(key);openModal(describe(key),p.t.edges,selFor(key).finish);return;}
-    if(el.hasAttribute('data-req-general')){openModal('General stock enquiry. Tell us which product type, shape and size you are interested in.',false,'none');return;}
   });
   document.addEventListener('change',function(e){
     var t=e.target;
@@ -581,16 +579,16 @@ footer.site{margin-top:0}
     e.preventDefault();
     var name=document.getElementById('rq-name').value.trim(),mail=document.getElementById('rq-email').value.trim(),err=document.getElementById('rq-err'),btn=document.getElementById('rq-send');
     if(!name){err.textContent='Enter your name so we know who to reply to.';err.hidden=false;document.getElementById('rq-name').focus();return;}
-    if(!/^\S+@\S+\.\S+$/.test(mail)){err.textContent='Enter a valid email address so we can send the photos.';err.hidden=false;document.getElementById('rq-email').focus();return;}
+    if(!/^\S+@\S+\.\S+$/.test(mail)){err.textContent='Enter a valid email address so we can send your payment link.';err.hidden=false;document.getElementById('rq-email').focus();return;}
     err.hidden=true;btn.disabled=true;btn.textContent='Sending';
-    var body=new URLSearchParams({'form-name':'request','bot-field':'',name:name,email:mail,item:document.getElementById('rq-item').value,
+    var body=new URLSearchParams({'form-name':'order','bot-field':'',name:name,email:mail,item:document.getElementById('rq-item').value,
       finish:document.getElementById('rq-finish-wrap').hidden?'':document.getElementById('rq-finish').value,note:document.getElementById('rq-note').value});
     fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:body.toString()}).then(function(r){
       if(!r.ok)throw new Error('bad');
       document.getElementById('reqForm').hidden=true;document.getElementById('rq-done').hidden=false;document.getElementById('reqForm').reset();
     }).catch(function(){
-      err.textContent='Your request did not send. Please try again, or message us on Instagram.';err.hidden=false;
-    }).then(function(){btn.disabled=false;btn.textContent='Send request';});
+      err.textContent='Your order did not send. Please try again, or message us on Instagram.';err.hidden=false;
+    }).then(function(){btn.disabled=false;btn.textContent='Send order';});
   });
   window.addEventListener('hashchange',function(){var h=location.hash.slice(1);if(SITE&&ROUTES.indexOf(h)>-1&&h!==state.route){state.route=h;render();window.scrollTo(0,0);}});
 

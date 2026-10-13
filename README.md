@@ -16,15 +16,15 @@ Static site for outsidethelines.uk. Hosted on Netlify, content edited through De
 4. In Netlify: Site configuration, Access & security, OAuth, Install provider, GitHub. Add a GitHub OAuth app client ID and secret.
 5. Give Amanda's GitHub account write access to the repo (Settings, Collaborators).
 6. In Netlify: Domain management, add outsidethelines.uk, then at the registrar point DNS to Netlify as instructed.
-7. In Netlify: Forms, Form notifications, add an email notification for the form named "request" so photo requests reach Amanda.
+7. In Netlify: Forms, Form notifications, add an email notification for the form named "order" so orders reach Amanda.
 
 ## Amanda editing the site
 Go to outsidethelines.uk/admin, log in with GitHub, edit "All pages", press Publish. The site updates in about a minute.
 
 ## Taking payment (Revolut payment links)
-1. Customer submits "Request photos" (arrives by email via Netlify Forms).
-2. Amanda replies with photos of what is in stock.
-3. Customer picks a piece. Amanda creates a payment link in Revolut Business (needs Revolut Business and a Merchant account) and sends it.
+1. Customer picks a piece and edge finish (resin or clean) and presses "Order this piece". The order arrives by email via Netlify Forms.
+2. Amanda checks the piece is available.
+3. Amanda creates a payment link in Revolut Business (needs Revolut Business and a Merchant account) and sends it.
 4. Amanda packs and posts after payment.
 
 ## Notes

@@ -7,26 +7,26 @@
     "eyebrow": "handmade in timber and resin",
     "line1": "Made by hand.",
     "line2": "Never the same twice.",
-    "lead": "Serving boards, platters, coasters and wine glasses in the Ocean, Mountain and Lava ranges. Choose a piece, ask to see photos of what is in stock, and pay by a secure link when you have decided."
+    "lead": "Serving boards, platters, coasters and wine glasses in the Ocean, Mountain and Lava ranges. Choose a piece and your edge finish, order online, and pay by a secure link."
   },
   "about": {
     "name": "Amanda Gratwick",
     "photo": "",
     "p1": "I’m Amanda Gratwick, the maker behind Outside The Lines Studio. I make serving boards, platters, coasters and wine glasses by hand, finished in one of three ranges: Ocean, Mountain or Lava.",
-    "p2": "No two pieces match. The timber, the colour and the edges change from one piece to the next, so you can choose from what is in stock or ask me for photos first.",
+    "p2": "No two pieces match. The timber, the colour and the resin change from one piece to the next, so every piece you receive is one of a kind.",
     "p3": "[A few lines on how you started, where you work and what you enjoy most about making each piece.]"
   },
   "ordering": {
     "title": "How ordering works",
-    "intro": "Every piece is different, so you choose from photos of what is in stock.",
+    "intro": "Every piece is handmade to order from the options you choose.",
     "steps": [
       {
         "title": "Choose a piece",
-        "text": "Browse the shop and pick the type, shape, size and range you like."
+        "text": "Browse the shop and pick the type, shape, size and range you like, then choose resin edges or clean edges."
       },
       {
-        "title": "Request photos",
-        "text": "Send a request and we reply with photos of the pieces in stock for that type."
+        "title": "Place your order",
+        "text": "Press Order this piece and send your name and email. We reply with your order details."
       },
       {
         "title": "Pay by secure link",
@@ -219,19 +219,15 @@
   "faqs": [
     {
       "q": "How do I order?",
-      "a": "Choose a piece, request photos of what is in stock, and tell us which one you would like. We then send a secure payment link and post your piece once it is paid."
+      "a": "Choose a piece, pick your size and edge finish (resin edges or clean edges), then press Order this piece. We email you a secure payment link and post your piece once it is paid."
     },
     {
       "q": "Is every piece different?",
-      "a": "Yes. Every piece is handmade, so the timber, the colours and the shape of the resin change from one to the next. The photos on the site show examples of each type."
+      "a": "Yes. Every piece is handmade, so the timber, the colours and the shape of the resin change from one to the next. The pictures on the site are illustrations of each type."
     },
     {
-      "q": "How can I see what is currently in stock?",
-      "a": "Use the request photos button on any product, or the one at the top of the page. Tell us the type, shape and size you want and we will send photos of what is in stock for that type of piece."
-    },
-    {
-      "q": "What is the difference between resin edges and clean edges?",
-      "a": "Some pieces have resin running down the edges as well as through the middle. Others are clean all the way round, with timber edges and the resin kept to the surface. You can choose a preference when you order."
+      "q": "What are the two types of resin finish?",
+      "a": "Resin edges: the resin runs down the sides of the piece as well as through the middle, so the colour wraps right round the edge. Clean edges: the timber edges stay natural all the way round and the resin is kept to the surface. You choose between the two from the Edge finish drop-down on each board and platter. [Amanda to confirm and add anything about how each is made or cared for.]"
     },
     {
       "q": "What are the Ocean, Mountain and Lava ranges?",
