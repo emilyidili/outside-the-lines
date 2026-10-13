@@ -22,6 +22,9 @@ Static site for outsidethelines.uk. Hosted on Netlify, content edited through De
 Go to outsidethelines.uk/admin, log in with GitHub, edit "All pages", press Publish. The site updates in about a minute.
 
 ## Taking payment (Revolut payment links)
+Fastest route: in the editor, open a shape size and paste a Revolut payment link into "Revolut payment link". That size then shows a Buy now button. Use the second link field for clean edges. Leave both empty to use the order form instead. Mark a size "Out of stock" to switch its button to Pre-order request.
+
+Order-form route:
 1. Customer picks a piece and edge finish (resin or clean) and presses "Order this piece". The order arrives by email via Netlify Forms.
 2. Amanda checks the piece is available.
 3. Amanda creates a payment link in Revolut Business (needs Revolut Business and a Merchant account) and sends it.

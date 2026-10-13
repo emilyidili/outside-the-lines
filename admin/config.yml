@@ -26,6 +26,7 @@ collections:
             fields:
               - { label: Name, name: name, widget: string }
               - { label: Instagram handle, name: instagram, widget: string }
+              - { label: Contact email address, name: email, widget: string, required: false }
           - label: Home page intro
             name: hero
             widget: object
@@ -43,6 +44,13 @@ collections:
               - { label: Paragraph 1, name: p1, widget: text }
               - { label: Paragraph 2, name: p2, widget: text }
               - { label: Paragraph 3, name: p3, widget: text }
+          - label: Contact page
+            name: contact
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Intro, name: intro, widget: text }
+              - { label: Note, name: note, widget: text, required: false }
           - label: How ordering works
             name: ordering
             widget: object
@@ -108,12 +116,23 @@ collections:
                   - { label: Id (do not change), name: id, widget: string }
                   - { label: Name, name: name, widget: string }
                   - { label: Picture style, name: kind, widget: string }
+                  - label: Product photos (add as many as you like)
+                    name: photos
+                    widget: list
+                    required: false
+                    fields:
+                      - { label: Photo, name: src, widget: image }
+                      - { label: Caption (for example Resin edges), name: label, widget: string, required: false }
+                      - { label: Shows which edge finish, name: finish, widget: select, options: [any, resin, clean], default: any }
                   - label: Sizes
                     name: sizes
                     widget: list
                     fields:
                       - { label: Size, name: label, widget: string }
                       - { label: Price in pounds, name: price, widget: number, value_type: int }
+                      - { label: Stock, name: stock, widget: select, options: [{label: In stock, value: in}, {label: Out of stock (pre-order), value: out}], default: in }
+                      - { label: Revolut payment link (resin edges, or the only option), name: link, widget: string, required: false }
+                      - { label: Revolut payment link for clean edges, name: linkClean, widget: string, required: false }
           - label: FAQs
             name: faqs
             widget: list

@@ -1,10 +1,11 @@
 {
   "brand": {
     "name": "Outside The Lines Studio",
-    "instagram": "outsidethelinesandbanks"
+    "instagram": "outsidethelinesandbanks",
+    "email": ""
   },
   "hero": {
-    "eyebrow": "handmade in timber and resin",
+    "eyebrow": "Handmade in timber and resin",
     "line1": "Made by hand.",
     "line2": "Never the same twice.",
     "lead": "Serving boards, platters, coasters and wine glasses in the Ocean, Mountain and Lava ranges. Choose a piece and your edge finish, order online, and pay by a secure link."
@@ -25,8 +26,8 @@
         "text": "Browse the shop and pick the type, shape, size and range you like, then choose resin edges or clean edges."
       },
       {
-        "title": "Place your order",
-        "text": "Press Order this piece and send your name and email. We reply with your order details."
+        "title": "Buy or place an order",
+        "text": "If a Buy now button is shown, pay securely through Revolut. Otherwise press Order this piece and we email you a secure payment link. Out of stock pieces can be pre-ordered."
       },
       {
         "title": "Pay by secure link",
@@ -80,13 +81,20 @@
           "sizes": [
             {
               "label": "35cm",
-              "price": 70
+              "price": 70,
+              "stock": "in",
+              "link": "",
+              "linkClean": ""
             },
             {
               "label": "45cm",
-              "price": 125
+              "price": 125,
+              "stock": "in",
+              "link": "",
+              "linkClean": ""
             }
-          ]
+          ],
+          "photos": []
         },
         {
           "id": "round",
@@ -95,13 +103,20 @@
           "sizes": [
             {
               "label": "33cm",
-              "price": 115
+              "price": 115,
+              "stock": "in",
+              "link": "",
+              "linkClean": ""
             },
             {
               "label": "46cm",
-              "price": 150
+              "price": 150,
+              "stock": "in",
+              "link": "",
+              "linkClean": ""
             }
-          ]
+          ],
+          "photos": []
         }
       ]
     },
@@ -123,13 +138,20 @@
           "sizes": [
             {
               "label": "35cm",
-              "price": 115
+              "price": 115,
+              "stock": "in",
+              "link": "",
+              "linkClean": ""
             },
             {
               "label": "50cm",
-              "price": 150
+              "price": 150,
+              "stock": "in",
+              "link": "",
+              "linkClean": ""
             }
-          ]
+          ],
+          "photos": []
         },
         {
           "id": "rustic",
@@ -138,13 +160,20 @@
           "sizes": [
             {
               "label": "30cm",
-              "price": 70
+              "price": 70,
+              "stock": "in",
+              "link": "",
+              "linkClean": ""
             },
             {
               "label": "45cm",
-              "price": 125
+              "price": 125,
+              "stock": "in",
+              "link": "",
+              "linkClean": ""
             }
-          ]
+          ],
+          "photos": []
         }
       ]
     },
@@ -166,9 +195,13 @@
           "sizes": [
             {
               "label": "Set of 4",
-              "price": 50
+              "price": 50,
+              "stock": "in",
+              "link": "",
+              "linkClean": ""
             }
-          ]
+          ],
+          "photos": []
         }
       ]
     },
@@ -190,13 +223,18 @@
           "sizes": [
             {
               "label": "Single glass",
-              "price": 24
+              "price": 24,
+              "stock": "in",
+              "link": ""
             },
             {
               "label": "Pair",
-              "price": 44
+              "price": 44,
+              "stock": "in",
+              "link": ""
             }
-          ]
+          ],
+          "photos": []
         },
         {
           "id": "stemless",
@@ -205,13 +243,18 @@
           "sizes": [
             {
               "label": "Single glass",
-              "price": 20
+              "price": 20,
+              "stock": "in",
+              "link": ""
             },
             {
               "label": "Pair",
-              "price": 36
+              "price": 36,
+              "stock": "in",
+              "link": ""
             }
-          ]
+          ],
+          "photos": []
         }
       ]
     }
@@ -265,5 +308,10 @@
       "q": "Can I collect in person?",
       "a": "[Amanda to confirm whether collection is available and where.]"
     }
-  ]
+  ],
+  "contact": {
+    "title": "Contact me",
+    "intro": "Questions about a piece, a pre-order or a custom idea? Send me an email or message me on Instagram.",
+    "note": "[Amanda to confirm usual reply time.]"
+  }
 }
