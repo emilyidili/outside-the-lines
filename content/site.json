@@ -1,21 +1,20 @@
 {
+  "contact": {
+    "title": "Contact me",
+    "intro": "Questions about a piece, a pre-order or a custom idea? Send me an email or message me on Instagram.",
+    "note": "[Amanda to confirm usual reply time.]"
+  },
   "brand": {
     "name": "Outside The Lines Studio",
     "instagram": "outsidethelinesandbanks",
     "email": "amandasgratwick@gmail.com"
   },
-  "hero": {
-    "eyebrow": "Handmade in timber and resin",
-    "line1": "Made by hand.",
-    "line2": "Never the same twice.",
-    "lead": "Serving boards, platters, coasters and wine glasses in the Ocean, Mountain and Lava ranges. Choose a piece and your edge finish, order online, and pay by a secure link."
-  },
   "about": {
     "name": "Amanda Gratwick",
     "photo": "",
-    "p1": "I’m Amanda Gratwick, the maker behind Outside The Lines Studio. I make serving boards, platters, coasters and wine glasses by hand, finished in one of three ranges: Ocean, Mountain or Lava.",
-    "p2": "No two pieces match. The timber, the colour and the resin change from one piece to the next, so every piece you receive is one of a kind.",
-    "p3": "[A few lines on how you started, where you work and what you enjoy most about making each piece.]"
+    "p1": "We spend our childhood being told to colour inside the lines, but through life I've discovered that all the best stuff happens when you venture outside the lines. I’m Amanda Gratwick, the maker behind Outside The Lines Studio, based in Sandbanks where I spend my life either in the ocean or recreating it in different forms in my studio, bringing a little bit of the wild and peace that the roll of the ocean provides. ",
+    "p2": "As a graphic designer in a world of AI I was looking for somewhere tangible to turn, something real I could hold in my hands and say I made. I love the sea, it is my place to escape and think, whether that's floating on a flat calm surface or kitesurfing in a wild and stormy environment, I find it grounding and it was in the sea I realised that I could bring an essence of this home and into my studio.",
+    "p3": "I make serving boards, platters, coasters and wine glasses by hand, all lines are available in my ocean range and a select few pieces are also available in my mountain and lava ranges. All the wooden boards are made from olive wood, perfect for serving food as it has a naturally occurring antibacterial property and is absolutely beautiful! Every item has two resin pours and no two pieces are the same. I let the grain of the wood and the pour of the resin decide how the water will flow, sometimes coating the edges, sometimes leaving a clean wooden finish all the way round. And if you are looking to finish the gift off I also draw ocean based greetings cards for the full sea worthy package.\n\nI hope you enjoy discovering my site and my products, if you have questions feel free to message me and I will do my best to answer! Also if the boards I produce aren't quite what you're looking for and you have a particular shape or size in mind please contact me to discuss a custom piece.\n\nAnd don't forget to take a peak outside the lines, you might just like what you find!"
   },
   "ordering": {
     "title": "How ordering works",
@@ -64,15 +63,9 @@
   },
   "types": [
     {
-      "key": "boards",
-      "name": "Serving boards with handles",
-      "short": "Serving board",
-      "blurb": "Timber boards with a handle, in irregular and round shapes, each finished with a resin wave.",
-      "ranges": true,
-      "edges": true,
       "tileKind": "board_long",
+      "name": "Serving boards with handles",
       "tileRange": "ocean",
-      "photo": "img/detail.jpg",
       "shapes": [
         {
           "id": "irregular",
@@ -118,18 +111,18 @@
           ],
           "photos": []
         }
-      ]
+      ],
+      "photo": "img/detail.jpg",
+      "edges": true,
+      "ranges": true,
+      "blurb": "Timber boards with a handle, in irregular and round shapes, each finished with a resin wave.",
+      "short": "Serving board",
+      "key": "boards"
     },
     {
-      "key": "platters",
-      "name": "Serving platters",
-      "short": "Serving platter",
-      "blurb": "Larger platters for sharing, in irregular and rustic shapes.",
-      "ranges": true,
-      "edges": true,
       "tileKind": "platter_oval",
+      "name": "Serving platters",
       "tileRange": "ocean",
-      "photo": "img/trio.jpg",
       "shapes": [
         {
           "id": "irregular",
@@ -175,18 +168,18 @@
           ],
           "photos": []
         }
-      ]
+      ],
+      "photo": "img/trio.jpg",
+      "edges": true,
+      "ranges": true,
+      "blurb": "Larger platters for sharing, in irregular and rustic shapes.",
+      "short": "Serving platter",
+      "key": "platters"
     },
     {
-      "key": "coasters",
-      "name": "Coasters",
-      "short": "Coasters",
-      "blurb": "Sold in sets of four, cut from the same piece so the pattern runs across the set.",
-      "ranges": true,
-      "edges": true,
       "tileKind": "coaster_round",
+      "name": "Coasters",
       "tileRange": "ocean",
-      "photo": "",
       "shapes": [
         {
           "id": "round",
@@ -203,18 +196,18 @@
           ],
           "photos": []
         }
-      ]
+      ],
+      "photo": "",
+      "edges": true,
+      "ranges": true,
+      "blurb": "Sold in sets of four, cut from the same piece so the pattern runs across the set.",
+      "short": "Coasters",
+      "key": "coasters"
     },
     {
-      "key": "glasses",
-      "name": "Wine glasses",
-      "short": "Wine glass",
-      "blurb": "Hand finished wine glasses, stemmed or stemless.",
-      "ranges": false,
-      "edges": false,
       "tileKind": "glass_stem",
+      "name": "Wine glasses",
       "tileRange": "ocean",
-      "photo": "",
       "shapes": [
         {
           "id": "stem",
@@ -256,9 +249,21 @@
           ],
           "photos": []
         }
-      ]
+      ],
+      "photo": "",
+      "edges": false,
+      "ranges": false,
+      "blurb": "Hand finished wine glasses, stemmed or stemless.",
+      "short": "Wine glass",
+      "key": "glasses"
     }
   ],
+  "hero": {
+    "eyebrow": "Handmade in olive wood and resin",
+    "line1": "Made by hand.",
+    "line2": "Never the same twice.",
+    "lead": "Serving boards, platters, coasters and wine glasses in Ocean, Mountain and Lava ranges. Choose a piece and your edge finish, order online, and pay by a secure link."
+  },
   "faqs": [
     {
       "q": "How do I order?",
@@ -308,10 +313,5 @@
       "q": "Can I collect in person?",
       "a": "[Amanda to confirm whether collection is available and where.]"
     }
-  ],
-  "contact": {
-    "title": "Contact me",
-    "intro": "Questions about a piece, a pre-order or a custom idea? Send me an email or message me on Instagram.",
-    "note": "[Amanda to confirm usual reply time.]"
-  }
+  ]
 }
