@@ -33,3 +33,4 @@ Order-form route:
 ## Notes
 - Pages use hash routing (#/shop), so each page is not separately indexed by search engines. Move to real page URLs later if search ranking matters.
 - The request form only works on Netlify, not on a local preview.
+- 
