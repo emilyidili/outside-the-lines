@@ -1,8 +1,8 @@
 {
   "contact": {
     "title": "Contact me",
-    "intro": "If you have questions about my products or would like to commission a particular piece please send me an email.",
-    "note": "[Amanda to confirm usual reply time.]"
+    "intro": "If you have questions about my products or would like to commission a particular piece please send me an email or drop me a message on Instagram.",
+    "note": "I will endeavour to reply to you within 48hrs."
   },
   "brand": {
     "name": "Outside The Lines Studio",
@@ -18,7 +18,7 @@
   },
   "ordering": {
     "title": "How ordering works",
-    "intro": "Every piece is handmade to order from the options you choose.",
+    "intro": "Every piece is handmade, you choose the piece you want, the range you would like it in and if it is a board whether you want it with a resin coated edge or a clean wooden edge. If your chosen item is in stock I will post it out to you within two working days and if it is not you can click to pre-order from my next series.",
     "steps": [
       {
         "title": "Choose a piece",
