@@ -307,11 +307,11 @@
     },
     {
       "q": "What if my order arrives damaged or I change my mind?",
-      "a": "[Amanda to add the returns and damage policy.]"
+      "a": "If your item arrives damaged, please take pictures and let me know as soon as possible. All items are fully insured so I will arrange a return for the piece and either a replacement or refund. I don't take returns for a change of mind however."
     },
     {
       "q": "Can I collect in person?",
-      "a": "[Amanda to confirm whether collection is available and where.]"
+      "a": "Yes! If you happen to be around Sandbanks in Poole you can collect from Easyriders on Shore Road beach, where you can also find a range exclusive to their shop!"
     }
   ]
 }
