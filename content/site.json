@@ -113,11 +113,39 @@
         }
       ],
       "photo": "img/detail.jpg",
-      "edges": true,
       "ranges": true,
       "blurb": "Olive wood boards with a handle, in irregular and round shapes in two different sizes.",
       "short": "Serving board",
-      "key": "boards"
+      "key": "boards",
+      "options": [
+        {
+          "id": "edge",
+          "label": "Edge finish",
+          "kind": "choice",
+          "enabled": true,
+          "choices": [
+            {
+              "value": "resin",
+              "label": "Resin edges"
+            },
+            {
+              "value": "clean",
+              "label": "Clean all round"
+            }
+          ],
+          "maxLength": 40
+        },
+        {
+          "id": "personalise",
+          "label": "Personalisation",
+          "kind": "personalisation",
+          "enabled": true,
+          "choices": [],
+          "maxLength": 40
+        }
+      ],
+      "hidden": false,
+      "sizeLabel": "Size"
     },
     {
       "tileKind": "platter_oval",
@@ -170,11 +198,39 @@
         }
       ],
       "photo": "img/trio.jpg",
-      "edges": true,
       "ranges": true,
       "blurb": "Larger platters for sharing, in irregular and rustic shapes.",
       "short": "Serving platter",
-      "key": "platters"
+      "key": "platters",
+      "options": [
+        {
+          "id": "edge",
+          "label": "Edge finish",
+          "kind": "choice",
+          "enabled": true,
+          "choices": [
+            {
+              "value": "resin",
+              "label": "Resin edges"
+            },
+            {
+              "value": "clean",
+              "label": "Clean all round"
+            }
+          ],
+          "maxLength": 40
+        },
+        {
+          "id": "personalise",
+          "label": "Personalisation",
+          "kind": "personalisation",
+          "enabled": true,
+          "choices": [],
+          "maxLength": 40
+        }
+      ],
+      "hidden": false,
+      "sizeLabel": "Size"
     },
     {
       "tileKind": "coaster_round",
@@ -198,11 +254,39 @@
         }
       ],
       "photo": "",
-      "edges": true,
       "ranges": true,
       "blurb": "These beautiful coasters are sold in sets of four, with all the texture and feel of the resin but a smooth flat surface to ensure your glass doesn't topple!",
       "short": "Coasters",
-      "key": "coasters"
+      "key": "coasters",
+      "options": [
+        {
+          "id": "edge",
+          "label": "Edge finish",
+          "kind": "choice",
+          "enabled": true,
+          "choices": [
+            {
+              "value": "resin",
+              "label": "Resin edges"
+            },
+            {
+              "value": "clean",
+              "label": "Clean all round"
+            }
+          ],
+          "maxLength": 40
+        },
+        {
+          "id": "personalise",
+          "label": "Personalisation",
+          "kind": "personalisation",
+          "enabled": true,
+          "choices": [],
+          "maxLength": 40
+        }
+      ],
+      "hidden": false,
+      "sizeLabel": "Quantity"
     },
     {
       "tileKind": "glass_stem",
@@ -251,11 +335,39 @@
         }
       ],
       "photo": "",
-      "edges": false,
       "ranges": false,
       "blurb": "Hand finished wine glasses, stemmed or stemless.",
       "short": "Wine glass",
-      "key": "glasses"
+      "key": "glasses",
+      "options": [
+        {
+          "id": "wine",
+          "label": "Wine type",
+          "kind": "choice",
+          "enabled": true,
+          "choices": [
+            {
+              "value": "red",
+              "label": "Red wine"
+            },
+            {
+              "value": "white",
+              "label": "White wine"
+            }
+          ],
+          "maxLength": 40
+        },
+        {
+          "id": "personalise",
+          "label": "Personalisation",
+          "kind": "personalisation",
+          "enabled": true,
+          "choices": [],
+          "maxLength": 40
+        }
+      ],
+      "hidden": false,
+      "sizeLabel": "Quantity"
     }
   ],
   "hero": {

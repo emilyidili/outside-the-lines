@@ -96,37 +96,62 @@ collections:
               - { label: Lava range photo, name: lava, widget: image, required: false }
               - { label: Resin edge photo, name: edgeResin, widget: image, required: false }
               - { label: Clean edge photo, name: edgeClean, widget: image, required: false }
-          - label: Shop product types
+          - label: Shop product groups (add, hide or remove groups here)
             name: types
             widget: list
+            summary: "{{fields.name}}"
             fields:
-              - { label: Key (do not change), name: key, widget: string }
+              - { label: Key (short lowercase word, no spaces, do not change once live), name: key, widget: string }
               - { label: Name, name: name, widget: string }
+              - { label: Hide this group from the website, name: hidden, widget: boolean, default: false, required: false }
               - { label: Short line, name: short, widget: string }
               - { label: Description, name: blurb, widget: text }
-              - { label: Has Ocean, Mountain, Lava ranges, name: ranges, widget: boolean, required: false }
-              - { label: Has resin or clean edge options, name: edges, widget: boolean, required: false }
-              - { label: Tile picture style, name: tileKind, widget: string, required: false }
-              - { label: Tile range, name: tileRange, widget: string, required: false }
-              - { label: Photo, name: photo, widget: image, required: false }
+              - { label: Show the Ocean, Mountain and Lava range picker, name: ranges, widget: boolean, required: false }
+              - { label: Label for the size choice (for example Size or Quantity), name: sizeLabel, widget: string, default: Size, required: false }
+              - { label: Group photo, name: photo, widget: image, required: false }
+              - { label: Group picture style when there is no photo, name: tileKind, widget: select, default: none, required: false, options: [none, board_rect, board_round, board_long, platter_round, platter_oval, platter_rect, coaster_round, coaster_square, coaster_hex, glass_stem, glass_stemless] }
+              - { label: Group picture colour, name: tileRange, widget: select, default: ocean, required: false, options: [ocean, mountain, lava] }
+              - label: Options for this group (switch each on or off)
+                name: options
+                widget: list
+                required: false
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: Key (short lowercase word, no spaces. Use edge for resin or clean edges so the picture changes), name: id, widget: string }
+                  - { label: Name shown to customers (for example Edge finish), name: label, widget: string }
+                  - { label: Type, name: kind, widget: select, default: choice, options: [{label: Choice list (customer picks one), value: choice}, {label: Personalisation (No or Yes, then a text box), value: personalisation}] }
+                  - { label: Switched on, name: enabled, widget: boolean, default: true }
+                  - label: Choices (for Choice list only)
+                    name: choices
+                    widget: list
+                    required: false
+                    summary: "{{fields.label}}"
+                    fields:
+                      - { label: Choice name shown to customers, name: label, widget: string }
+                      - { label: Short key (lowercase, no spaces, used to match photos), name: value, widget: string }
+                  - { label: Maximum characters for the personalisation text, name: maxLength, widget: number, value_type: int, default: 40, min: 1, max: 200, required: false }
+                  - { label: Personalisation box heading, name: prompt, widget: string, default: Text to add, required: false }
               - label: Shapes
                 name: shapes
                 widget: list
+                summary: "{{fields.name}}"
                 fields:
-                  - { label: Id (do not change), name: id, widget: string }
+                  - { label: Id (do not change once live), name: id, widget: string }
                   - { label: Name, name: name, widget: string }
-                  - { label: Picture style, name: kind, widget: string }
+                  - { label: Picture style when there is no photo, name: kind, widget: select, default: none, required: false, options: [none, board_rect, board_round, board_long, platter_round, platter_oval, platter_rect, coaster_round, coaster_square, coaster_hex, glass_stem, glass_stemless] }
                   - label: Product photos (add as many as you like)
                     name: photos
                     widget: list
                     required: false
+                    summary: "{{fields.label}}"
                     fields:
                       - { label: Photo, name: src, widget: image }
                       - { label: Caption (for example Resin edges), name: label, widget: string, required: false }
-                      - { label: Shows which edge finish, name: finish, widget: select, options: [any, resin, clean], default: any }
+                      - { label: Show this photo when the customer picks this choice key (type any to always allow), name: finish, widget: string, default: any, required: false }
                   - label: Sizes
                     name: sizes
                     widget: list
+                    summary: "{{fields.label}}"
                     fields:
                       - { label: Size, name: label, widget: string }
                       - { label: Price in pounds, name: price, widget: number, value_type: int }
