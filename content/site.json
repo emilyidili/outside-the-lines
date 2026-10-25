@@ -264,7 +264,7 @@
           "id": "edge",
           "label": "Edge finish",
           "kind": "choice",
-          "enabled": true,
+          "enabled": false,
           "choices": [
             {
               "value": "resin",
