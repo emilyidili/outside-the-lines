@@ -79,8 +79,8 @@ collections:
                 fields:
                   - { label: Name, name: name, widget: string }
                   - { label: Description, name: blurb, widget: text }
-              - label: Lava
-                name: lava
+              - label: Sunset
+                name: sunset
                 widget: object
                 fields:
                   - { label: Name, name: name, widget: string }
@@ -93,9 +93,91 @@ collections:
               - { label: Home page small photo, name: heroCorner, widget: image, required: false }
               - { label: Ocean range photo, name: ocean, widget: image, required: false }
               - { label: Mountain range photo, name: mountain, widget: image, required: false }
-              - { label: Lava range photo, name: lava, widget: image, required: false }
+              - { label: Sunset range photo, name: sunset, widget: image, required: false }
               - { label: Resin edge photo, name: edgeResin, widget: image, required: false }
               - { label: Clean edge photo, name: edgeClean, widget: image, required: false }
+          - label: All other wording (buttons, headings, notes, messages)
+            name: text
+            widget: object
+            collapsed: true
+            summary: "Edit any wording on the site"
+            fields:
+              - { label: "Menu: Home", name: navHome, widget: string, required: false }
+              - { label: "Menu: Shop", name: navShop, widget: string, required: false }
+              - { label: "Menu: About", name: navAbout, widget: string, required: false }
+              - { label: "Menu: FAQs", name: navFaqs, widget: string, required: false }
+              - { label: "Menu: Contact", name: navContact, widget: string, required: false }
+              - { label: "Footer: Instagram label", name: footInsta, widget: string, required: false }
+              - { label: "Home: main button", name: heroCta, widget: string, required: false }
+              - { label: "Home: shop section small heading", name: homeShopEyebrow, widget: string, required: false }
+              - { label: "Home: shop section title", name: homeShopTitle, widget: string, required: false }
+              - { label: "Home: shop section text", name: homeShopText, widget: text, required: false }
+              - { label: "Product tile link, {name} is the product name", name: goShop, widget: string, required: false }
+              - { label: "Home: ranges small heading", name: homeRangesEyebrow, widget: string, required: false }
+              - { label: "Home: ranges title", name: homeRangesTitle, widget: string, required: false }
+              - { label: "Home: ranges text", name: homeRangesText, widget: text, required: false }
+              - { label: "Range tile link, {range} is the range name", name: goRange, widget: string, required: false }
+              - { label: "Home: ordering small heading", name: orderingEyebrow, widget: string, required: false }
+              - { label: "Home: word before step number", name: stepWord, widget: string, required: false }
+              - { label: "Home: edge section small heading", name: edgeEyebrow, widget: string, required: false }
+              - { label: "Home: edge section title", name: edgeTitle, widget: string, required: false }
+              - { label: "Home: edge section text", name: edgeText, widget: text, required: false }
+              - { label: "Resin edges title", name: resinTitle, widget: string, required: false }
+              - { label: "Resin edges text", name: resinText, widget: text, required: false }
+              - { label: "Clean edges title", name: cleanTitle, widget: string, required: false }
+              - { label: "Clean edges text", name: cleanText, widget: text, required: false }
+              - { label: "Shop page: small heading", name: shopEyebrow, widget: string, required: false }
+              - { label: "Shop page: title", name: shopTitle, widget: string, required: false }
+              - { label: "Shop page: text", name: shopText, widget: text, required: false }
+              - { label: "Shop tile link when a product has one shape", name: viewOne, widget: string, required: false }
+              - { label: "Shop tile link, {n} is the number of shapes", name: viewMany, widget: string, required: false }
+              - { label: "Product page: breadcrumb start", name: crumbShop, widget: string, required: false }
+              - { label: "Product page: small heading", name: typeEyebrow, widget: string, required: false }
+              - { label: "Product page: range picker label", name: rangeLabel, widget: string, required: false }
+              - { label: "Size button tag for out of stock sizes", name: preorderTag, widget: string, required: false }
+              - { label: "Personalisation: first choice", name: noPers, widget: string, required: false }
+              - { label: "Personalisation: second choice", name: persYes, widget: string, required: false }
+              - { label: "Personalisation: message if the box is empty", name: persErr, widget: string, required: false }
+              - { label: "Personalisation: word after the character count", name: charsWord, widget: string, required: false }
+              - { label: "Stock label: in stock", name: stockIn, widget: string, required: false }
+              - { label: "Stock label: out of stock", name: stockOut, widget: string, required: false }
+              - { label: "Button: buy now", name: buyBtn, widget: string, required: false }
+              - { label: "Note under Buy now", name: buyNote, widget: text, required: false }
+              - { label: "Button: order form", name: orderBtn, widget: string, required: false }
+              - { label: "Note under the order button", name: orderNote, widget: text, required: false }
+              - { label: "Button: pre-order", name: preorderBtn, widget: string, required: false }
+              - { label: "Note under the pre-order button", name: preorderNote, widget: text, required: false }
+              - { label: "Product page: note at the bottom", name: pageNote, widget: text, required: false }
+              - { label: "About page: small heading", name: aboutEyebrow, widget: string, required: false }
+              - { label: "About page: title", name: aboutTitle, widget: string, required: false }
+              - { label: "About page: greeting, {name} is the first name", name: aboutHello, widget: string, required: false }
+              - { label: "About page: Instagram button, {handle} is the handle", name: followBtn, widget: string, required: false }
+              - { label: "FAQs: small heading", name: faqEyebrow, widget: string, required: false }
+              - { label: "FAQs: title", name: faqTitle, widget: string, required: false }
+              - { label: "FAQs: intro text", name: faqIntro, widget: text, required: false }
+              - { label: "FAQs: bottom heading", name: faqStill, widget: string, required: false }
+              - { label: "FAQs: bottom button, {handle} is the handle", name: faqBtn, widget: string, required: false }
+              - { label: "Contact: small heading", name: contactEyebrow, widget: string, required: false }
+              - { label: "Contact: email label", name: emailLabel, widget: string, required: false }
+              - { label: "Contact: Instagram label", name: instaLabel, widget: string, required: false }
+              - { label: "Contact: email button", name: emailBtn, widget: string, required: false }
+              - { label: "Order form: title", name: formOrderTitle, widget: string, required: false }
+              - { label: "Pre-order form: title", name: formPreorderTitle, widget: string, required: false }
+              - { label: "Order form: intro", name: formOrderLead, widget: text, required: false }
+              - { label: "Pre-order form: intro", name: formPreorderLead, widget: text, required: false }
+              - { label: "Order form: product label", name: fieldProduct, widget: string, required: false }
+              - { label: "Order form: name label", name: fieldName, widget: string, required: false }
+              - { label: "Order form: email label", name: fieldEmail, widget: string, required: false }
+              - { label: "Order form: note label", name: fieldNote, widget: string, required: false }
+              - { label: "Order form: send button", name: sendOrder, widget: string, required: false }
+              - { label: "Pre-order form: send button", name: sendPreorder, widget: string, required: false }
+              - { label: "Order form: while sending", name: sending, widget: string, required: false }
+              - { label: "Order form: missing name message", name: errName, widget: string, required: false }
+              - { label: "Order form: bad email message", name: errEmail, widget: string, required: false }
+              - { label: "Order form: failed to send message", name: errSend, widget: string, required: false }
+              - { label: "Order sent: title", name: doneTitle, widget: string, required: false }
+              - { label: "Order sent: text", name: doneText, widget: text, required: false }
+              - { label: "Order sent: close button", name: closeBtn, widget: string, required: false }
           - label: Shop product groups (add, hide or remove groups here)
             name: types
             widget: list
@@ -106,11 +188,12 @@ collections:
               - { label: Hide this group from the website, name: hidden, widget: boolean, default: false, required: false }
               - { label: Short line, name: short, widget: string }
               - { label: Description, name: blurb, widget: text }
-              - { label: Show the Ocean, Mountain and Lava range picker, name: ranges, widget: boolean, required: false }
+              - { label: Offer ranges for this group (master switch), name: ranges, widget: boolean, required: false }
+              - { label: Ranges available for this group (untick a range to turn it off for this group), name: rangeList, widget: select, multiple: true, required: false, options: [{label: Ocean, value: ocean}, {label: Mountain, value: mountain}, {label: Sunset, value: sunset}], default: [ocean, mountain, sunset] }
               - { label: Label for the size choice (for example Size or Quantity), name: sizeLabel, widget: string, default: Size, required: false }
               - { label: Group photo, name: photo, widget: image, required: false }
               - { label: Group picture style when there is no photo, name: tileKind, widget: select, default: none, required: false, options: [none, board_rect, board_round, board_long, platter_round, platter_oval, platter_rect, coaster_round, coaster_square, coaster_hex, glass_stem, glass_stemless] }
-              - { label: Group picture colour, name: tileRange, widget: select, default: ocean, required: false, options: [ocean, mountain, lava] }
+              - { label: Group picture colour, name: tileRange, widget: select, default: ocean, required: false, options: [ocean, mountain, sunset] }
               - label: Options for this group (switch each on or off)
                 name: options
                 widget: list
@@ -129,6 +212,8 @@ collections:
                     fields:
                       - { label: Choice name shown to customers, name: label, widget: string }
                       - { label: Short key (lowercase, no spaces, used to match photos), name: value, widget: string }
+                      - { label: Extra price in pounds for this choice (0 for none), name: extra, widget: number, value_type: float, default: 0, min: 0, required: false }
+                  - { label: Extra price in pounds when personalisation is chosen (0 for none), name: extra, widget: number, value_type: float, default: 0, min: 0, required: false }
                   - { label: Maximum characters for the personalisation text, name: maxLength, widget: number, value_type: int, default: 40, min: 1, max: 200, required: false }
                   - { label: Personalisation box heading, name: prompt, widget: string, default: Text to add, required: false }
               - label: Shapes

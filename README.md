@@ -44,3 +44,9 @@ Order-form route:
   - Personalisation: the customer picks No personalisation or Personalisation. If Personalisation, a text box appears, capped at the maximum characters you set (default 40). The text is included in the order.
 - Photos can be tied to a choice by typing the choice key (for example resin or clean) in "Show this photo when..." Type any to allow all.
 - Buy now button rule: a Revolut link is used only when no personalisation is chosen and the group has no choice options other than edge finish. Otherwise the customer uses the order form and you send a payment link.
+
+## Ranges per group and site wording
+
+- Each product group has "Ranges available for this group". Untick a range to turn it off for that group. If only one range is left the picker is hidden. The home page only shows ranges that at least one visible group offers.
+- "All other wording" in the CMS holds every button, heading, note and message on the site. Fields left blank fall back to the original wording.
+- Options and choices have an optional "Extra price" which is added to the displayed price.

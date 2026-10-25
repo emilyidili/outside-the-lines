@@ -14,7 +14,7 @@
     "photo": "",
     "p1": "We spend our childhood being told to colour inside the lines, but through life I've discovered that all the best stuff happens when you venture outside the lines.",
     "p2": "I’m Amanda Gratwick, the maker behind Outside The Lines Studio, based in Sandbanks where I spend my life either in the ocean, whether that's floating on a flat calm surface or kitesurfing in a wild and stormy environment, or recreating it in different forms in my studio, bringing a little bit of both the wild and the peace that the roll of the ocean provides. ",
-    "p3": "I make serving boards, platters, coasters and wine glasses by hand, all lines are available in my ocean range and a select few pieces are also available in my mountain and lava ranges. All the wooden boards are made from olive wood, perfect for serving food as it has naturally occurring antibacterial properties! Every item has two resin pours and no two pieces are the same. I let the grain of the wood and the pour of the resin decide how the water will flow, sometimes coating the edges, sometimes leaving a clean wooden finish all the way round. And if you are looking to finish the gift off I also draw ocean based greetings cards for the full sea worthy package.\n\nI hope you enjoy discovering my site and my products, if you have questions feel free to message me and I will do my best to answer! Also if the boards I produce aren't quite what you're looking for and you have a particular shape or size in mind please contact me to discuss a custom piece.\n\nAnd don't forget to take a peak outside the lines, you might just like what you find!"
+    "p3": "I make serving boards, platters, coasters and wine glasses by hand, all lines are available in my ocean range and a select few pieces are also available in my mountain and sunset ranges. All the wooden boards are made from olive wood, perfect for serving food as it has naturally occurring antibacterial properties! Every item has two resin pours and no two pieces are the same. I let the grain of the wood and the pour of the resin decide how the water will flow, sometimes coating the edges, sometimes leaving a clean wooden finish all the way round. And if you are looking to finish the gift off I also draw ocean based greetings cards for the full sea worthy package.\n\nI hope you enjoy discovering my site and my products, if you have questions feel free to message me and I will do my best to answer! Also if the boards I produce aren't quite what you're looking for and you have a particular shape or size in mind please contact me to discuss a custom piece.\n\nAnd don't forget to take a peak outside the lines, you might just like what you find!"
   },
   "ordering": {
     "title": "How ordering works",
@@ -22,7 +22,7 @@
     "steps": [
       {
         "title": "Choose a piece",
-        "text": "Pick which type of item you would like and the shape and size you would like it in. Next, choose which of the Ocean, Mountain or Lava ranges you would like it in and finally, if you have picked a serving board or platter you can choose if you would like a flowing resin edge or clean wood all round. Or if you can't choose, hit 'I don't mind' and I'll pack up my personal favourite of the series for you."
+        "text": "Pick which type of item you would like and the shape and size you would like it in. Next, choose which of the Ocean, Mountain or Sunset ranges you would like it in and finally, if you have picked a serving board or platter you can choose if you would like a flowing resin edge or clean wood all round. Or if you can't choose, hit 'I don't mind' and I'll pack up my personal favourite of the series for you."
       },
       {
         "title": "Buy or place an order",
@@ -47,8 +47,8 @@
       "name": "Mountain",
       "blurb": "Layered black ridges with white snowy caps."
     },
-    "lava": {
-      "name": "Lava",
+    "sunset": {
+      "name": "Sunset",
       "blurb": "Beautiful reds, blacks and golds."
     }
   },
@@ -57,7 +57,7 @@
     "heroCorner": "img/detail.jpg",
     "ocean": "img/board.jpg",
     "mountain": "",
-    "lava": "",
+    "sunset": "",
     "edgeResin": "img/edge.jpg",
     "edgeClean": "img/board.jpg"
   },
@@ -145,7 +145,12 @@
           "maxLength": 40
         }
       ],
-      "key": "boards"
+      "key": "boards",
+      "rangeList": [
+        "ocean",
+        "mountain",
+        "sunset"
+      ]
     },
     {
       "tileKind": "platter_oval",
@@ -230,7 +235,12 @@
           "maxLength": 40
         }
       ],
-      "key": "platters"
+      "key": "platters",
+      "rangeList": [
+        "ocean",
+        "mountain",
+        "sunset"
+      ]
     },
     {
       "tileKind": "coaster_round",
@@ -286,7 +296,12 @@
           "maxLength": 40
         }
       ],
-      "key": "coasters"
+      "key": "coasters",
+      "rangeList": [
+        "ocean",
+        "mountain",
+        "sunset"
+      ]
     },
     {
       "tileKind": "glass_stem",
@@ -367,14 +382,15 @@
           "maxLength": 40
         }
       ],
-      "key": "glasses"
+      "key": "glasses",
+      "rangeList": []
     }
   ],
   "hero": {
     "eyebrow": "Handmade with love in Dorset",
     "line1": "Made by hand.",
     "line2": "Never the same twice.",
-    "lead": "Beautiful handmade products in olive wood and resin, in Ocean, Mountain and Sunset ranges. No two items the same so no-one will ever have another piece like it."
+    "lead": "Beautiful serving boards, platters, coasters and wine glasses in Ocean, Mountain and Sunset ranges. Choose an item, the range and your edge finish and rest assured no one will ever have another piece like it."
   },
   "faqs": [
     {
@@ -390,8 +406,8 @@
       "a": "I create two different finished edges to choose from\nResin edges: the resin flows off the board and coats the edges, so the effect wraps right round the edge. Clean edges: the olive wood edges stay natural all the way round and the resin is kept to the surface. You choose between the two from the Edge finish drop-down on each board and platter. And if you can't decide between the two, order one of each!"
     },
     {
-      "q": "What are the Ocean, Mountain and Lava ranges?",
-      "a": "Ocean pieces use teals and deep blues with white wave lines. Mountain pieces have layered black mountain ridges with white snowy caps. Lava pieces have have gorgeous reds, blacks and golds flowing across them. All ranges are available in Ocean but only select pieces are avaiable in the other two ranges so please check each item to see your options."
+      "q": "What are the Ocean, Mountain and Sunset ranges?",
+      "a": "Ocean pieces use teals and deep blues with white wave lines. Mountain pieces have layered black mountain ridges with white snowy caps. Sunset pieces have have gorgeous reds, blacks and golds flowing across them. All ranges are available in Ocean but only select pieces are avaiable in the other two ranges so please check each item to see your options."
     },
     {
       "q": "Which payment methods do you accept?",
@@ -425,5 +441,83 @@
       "q": "Can I collect in person?",
       "a": "Yes! If you happen to be around Sandbanks in Poole you can collect from Easyriders on Shore Road beach, where you can also find a range exclusive to their shop!"
     }
-  ]
+  ],
+  "text": {
+    "navHome": "Home",
+    "navShop": "Shop",
+    "navAbout": "About",
+    "navFaqs": "FAQs",
+    "navContact": "Contact",
+    "footInsta": "Instagram",
+    "heroCta": "Shop the range",
+    "homeShopEyebrow": "The shop",
+    "homeShopTitle": "Shop by product",
+    "homeShopText": "Choose a type of piece. Each comes in a choice of shapes and sizes.",
+    "goShop": "shop {name}",
+    "homeRangesEyebrow": "Ranges",
+    "homeRangesTitle": "Choose a range",
+    "homeRangesText": "Pick a range, then choose the product type, shape and size.",
+    "goRange": "see {range} pieces",
+    "orderingEyebrow": "Ordering",
+    "stepWord": "step",
+    "edgeEyebrow": "Every piece differs",
+    "edgeTitle": "Resin edges or clean edges",
+    "edgeText": "Choose resin edges or clean edges from the drop-down on any board or platter. You will see the choice in the product picture.",
+    "resinTitle": "Resin edges",
+    "resinText": "Resin runs down the sides as well as through the middle.",
+    "cleanTitle": "Clean all round",
+    "cleanText": "Timber edges all the way round, with the resin kept to the centre.",
+    "shopEyebrow": "The shop",
+    "shopTitle": "Shop",
+    "shopText": "Choose a type of piece. Each comes in a choice of shapes and sizes, and some come in the Ocean, Mountain and Sunset ranges.",
+    "viewOne": "view 1 shape",
+    "viewMany": "view {n} shapes",
+    "crumbShop": "Shop",
+    "typeEyebrow": "Shop",
+    "rangeLabel": "Range",
+    "preorderTag": " (pre-order)",
+    "noPers": "No personalisation",
+    "persYes": "Personalisation",
+    "persErr": "Enter the text you would like added.",
+    "charsWord": "characters",
+    "stockIn": "In stock",
+    "stockOut": "Out of stock, pre-order available",
+    "buyBtn": "Buy now",
+    "buyNote": "Secure payment by card, Apple Pay or Google Pay through Revolut. Illustration shown, every piece differs.",
+    "orderBtn": "Order this piece",
+    "orderNote": "Illustration shown, every piece differs.",
+    "preorderBtn": "Pre-order request",
+    "preorderNote": "This piece is being made. Send a request and I will confirm timing.",
+    "pageNote": "Each piece is handmade, so no two are identical. Choose your shape, size and options, then order.",
+    "aboutEyebrow": "About",
+    "aboutTitle": "The maker",
+    "aboutHello": "Hello, I’m {name}.",
+    "followBtn": "Follow {handle}",
+    "faqEyebrow": "FAQs",
+    "faqTitle": "Questions",
+    "faqIntro": "Answers to the questions we are asked most. If yours is not here, ask and we will get back to you.",
+    "faqStill": "Still have a question?",
+    "faqBtn": "Message {handle}",
+    "contactEyebrow": "Contact",
+    "emailLabel": "Email",
+    "instaLabel": "Instagram",
+    "emailBtn": "Email me",
+    "formOrderTitle": "Order this piece",
+    "formPreorderTitle": "Pre-order request",
+    "formOrderLead": "Send your details and I will be in touch. Every piece is handmade, so there may be small differences from the illustration.",
+    "formPreorderLead": "This piece is out of stock. Send your details and I will confirm when it can be made.",
+    "fieldProduct": "Product",
+    "fieldName": "Your name",
+    "fieldEmail": "Email",
+    "fieldNote": "Anything else",
+    "sendOrder": "Send order",
+    "sendPreorder": "Send pre-order request",
+    "sending": "Sending",
+    "errName": "Enter your name so I know who to reply to.",
+    "errEmail": "Enter a valid email address so I can reply to you.",
+    "errSend": "Your order did not send. Please try again, or message me on Instagram.",
+    "doneTitle": "Order received",
+    "doneText": "Thank you, your order has been received and I will be in touch.",
+    "closeBtn": "Close"
+  }
 }

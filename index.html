@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Outside The Lines Studio | Handmade resin serving boards, platters and coasters</title>
-<meta name="description" content="Handmade timber and resin serving boards, platters, coasters and wine glasses in Ocean, Mountain and Lava ranges. Every piece is different. Choose your edge finish and order online.">
+<meta name="description" content="Handmade timber and resin serving boards, platters, coasters and wine glasses in Ocean, Mountain and Sunset ranges. Every piece is different. Choose your edge finish and order online.">
 <meta property="og:title" content="Outside The Lines Studio">
 <meta property="og:description" content="Handmade timber and resin serving boards, platters, coasters and wine glasses. Every piece is different.">
 <meta property="og:type" content="website">
@@ -23,7 +23,7 @@ img{max-width:100%}
 
 /* Layout concept: full width colour bands in the brand teals and blues, with photography stepping outside thin ruled frames. Lowercase hand lettering echoes the logo. */
 :root{
-  --bg:#0a1330; --surface:#101d44; --tile:#0c1736; --fg:#eef5f8; --muted:#a9bccb;
+  --bg:#0a1330; --surface:#101d44; --tile:#0c1736; --fg:#eef5f8; --tilefg:#eef5f8; --muted:#a9bccb;
   --line:#1f3566; --line-strong:#3d5f99;
   --teal:#3cada6; --cyan:#19819a; --blue:#16508f; --indigo:#273476;
   --accent:#3cada6; --accent-fg:#04141c; --accent-hover:#7fd9d2; --link:#7fd9d2;
@@ -44,7 +44,7 @@ img{max-width:100%}
 }
 @media (prefers-color-scheme: light){
   :root:not([data-theme="dark"]){
-    --bg:#eef6f8; --surface:#ffffff; --tile:#dfecf0; --fg:#0c1a3a; --muted:#4a6178;
+    --bg:#eef6f8; --surface:#ffffff; --tile:#dfecf0; --fg:#0c1a3a; --tilefg:#0c1a3a; --muted:#4a6178;
     --line:#cfe0e6; --line-strong:#9db9c6;
     --accent:#16508f; --accent-fg:#ffffff; --accent-hover:#273476; --link:#16508f;
     --glow:rgba(60,173,166,.2); --scrim:rgba(8,22,38,.55); --err:#b3261e; --mark:.06;
@@ -53,7 +53,7 @@ img{max-width:100%}
   }
 }
 :root[data-theme="light"]{
-  --bg:#eef6f8; --surface:#ffffff; --tile:#dfecf0; --fg:#0c1a3a; --muted:#4a6178;
+  --bg:#eef6f8; --surface:#ffffff; --tile:#dfecf0; --fg:#0c1a3a; --tilefg:#0c1a3a; --muted:#4a6178;
   --line:#cfe0e6; --line-strong:#9db9c6;
   --accent:#16508f; --accent-fg:#ffffff; --accent-hover:#273476; --link:#16508f;
   --glow:rgba(60,173,166,.2); --scrim:rgba(8,22,38,.55); --err:#b3261e; --mark:.06;
@@ -129,6 +129,7 @@ nav.main a:hover,nav.main a[aria-current="page"]{border-bottom-color:#3cada6}
 .sec-head>p{max-width:34em;color:var(--muted)}
 .grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
 .grid.products{grid-template-columns:repeat(auto-fit,minmax(280px,400px));justify-content:start}
+.band .link-tile,.band .card{--fg:var(--tilefg)}
 .link-tile,.card{display:flex;flex-direction:column;background:var(--surface);color:var(--fg);border:1px solid var(--line);overflow:hidden;text-decoration:none;min-width:0;--muted:#a9bccb}
 :root[data-theme="light"] .link-tile,:root[data-theme="light"] .card{--muted:#4a6178;--link:#16508f}
 @media (prefers-color-scheme: light){:root:not([data-theme="dark"]) .link-tile,:root:not([data-theme="dark"]) .card{--muted:#4a6178;--link:#16508f}}
@@ -137,7 +138,7 @@ nav.main a:hover,nav.main a[aria-current="page"]{border-bottom-color:#3cada6}
 .bar-brand{background:linear-gradient(90deg,#3cada6,#19819a,#16508f,#273476)}
 .bar-ocean{background:linear-gradient(90deg,#3cada6,#16508f)}
 .bar-mountain{background:linear-gradient(90deg,#273476,#8aa5c8)}
-.bar-lava{background:linear-gradient(90deg,#15151a,#f26a2e)}
+.bar-sunset{background:linear-gradient(90deg,#15151a,#f26a2e)}
 .tile{background:var(--tile);padding:16px}
 .tile.photo{padding:0;overflow:hidden}
 .tile.photo img{display:block;width:100%;aspect-ratio:10/7;object-fit:cover}
@@ -147,7 +148,7 @@ nav.main a:hover,nav.main a[aria-current="page"]{border-bottom-color:#3cada6}
 .swatch{display:inline-block;width:.5em;height:.5em;border-radius:50%;margin-right:.5em;vertical-align:.1em}
 .sw-ocean{background:linear-gradient(135deg,#16508f,#3cada6)}
 .sw-mountain{background:linear-gradient(135deg,#273476,#8aa5c8)}
-.sw-lava{background:linear-gradient(135deg,#15151a,#f26a2e)}
+.sw-sunset{background:linear-gradient(135deg,#15151a,#f26a2e)}
 
 .crumbs{display:flex;gap:10px;align-items:center;font-size:.85rem;letter-spacing:.18em;color:var(--muted)}
 .crumbs a{color:var(--link)}
@@ -328,7 +329,7 @@ footer.site{margin-top:0}
     </form>
     <div id="rq-done" hidden style="display:grid;gap:12px">
       <h3>Order received</h3>
-      <p>Thank you. We will email you a secure payment link, usually within [Amanda to confirm reply time]. Your piece is posted once it is paid.</p>
+      <p>Thank you, your order has been received and I will be in touch.</p>
       <button class="btn" type="button" data-close>Close</button>
     </div>
   </div>
@@ -358,7 +359,7 @@ footer.site{margin-top:0}
   var PAL={
     ocean:{edge:'#19819a',band:['#0f3a6b','#16508f','#19819a','#3cada6','#8fd9d2']},
     mountain:{edge:'#16508f',ridges:['#8aa5c8','#16508f','#273476'],bg:'#dbe6f1'},
-    lava:{edge:'#f26a2e',bg:'#15151a',veins:['#c23a1c','#f26a2e','#f7b23b']}
+    sunset:{edge:'#f26a2e',bg:'#15151a',veins:['#c23a1c','#f26a2e','#f7b23b']}
   };
   var uid=0;
   function placeholderArt(){return '<svg viewBox="0 0 200 140" role="img" aria-label="Photo coming soon" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="phg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#dbe9ee"/><stop offset="1" stop-color="#bcd7de"/></linearGradient></defs><rect width="200" height="140" fill="url(#phg)"/><path d="M0 92 C30 78 55 106 90 92 S150 78 200 94 V140 H0 Z" fill="#3cada6" opacity=".35"/><path d="M0 108 C34 96 60 120 100 108 S160 96 200 110 V140 H0 Z" fill="#19819a" opacity=".35"/><text x="100" y="62" text-anchor="middle" font-family="Lato,Arial,sans-serif" font-size="11" letter-spacing="2" fill="#16508f">PHOTO COMING SOON</text></svg>';}
@@ -385,7 +386,7 @@ footer.site{margin-top:0}
           band+='<path d="M'+top.join('L')+'L'+line(0.7).reverse().join('L')+'Z" fill="'+P.ridges[j]+'"/>';
         })(i);
       }
-    }else if(range==='lava'){
+    }else if(range==='sunset'){
       band+='<path d="'+region(-0.5,0.5)+'" fill="'+P.bg+'"/>';
       var tv=[-0.22,0.04,0.28];
       for(i=0;i<3;i++){
@@ -420,7 +421,13 @@ footer.site{margin-top:0}
 
 
   var STATIC_ROUTES=['home','shop','about','faqs','contact'];
-  var RKEYS=['ocean','mountain','lava'];
+  var RKEYS=['ocean','mountain','sunset'];
+  var TXD={"navHome": "Home", "navShop": "Shop", "navAbout": "About", "navFaqs": "FAQs", "navContact": "Contact", "footInsta": "Instagram", "heroCta": "Shop the range", "homeShopEyebrow": "The shop", "homeShopTitle": "Shop by product", "homeShopText": "Choose a type of piece. Each comes in a choice of shapes and sizes.", "goShop": "shop {name}", "homeRangesEyebrow": "Ranges", "homeRangesTitle": "Choose a range", "homeRangesText": "Pick a range, then choose the product type, shape and size.", "goRange": "see {range} pieces", "orderingEyebrow": "Ordering", "stepWord": "step", "edgeEyebrow": "Every piece differs", "edgeTitle": "Resin edges or clean edges", "edgeText": "Choose resin edges or clean edges from the drop-down on any board or platter. You will see the choice in the product picture.", "resinTitle": "Resin edges", "resinText": "Resin runs down the sides as well as through the middle.", "cleanTitle": "Clean all round", "cleanText": "Timber edges all the way round, with the resin kept to the centre.", "shopEyebrow": "The shop", "shopTitle": "Shop", "shopText": "Choose a type of piece. Each comes in a choice of shapes and sizes, and some come in the Ocean, Mountain and Sunset ranges.", "viewOne": "view 1 shape", "viewMany": "view {n} shapes", "crumbShop": "Shop", "typeEyebrow": "Shop", "rangeLabel": "Range", "preorderTag": " (pre-order)", "noPers": "No personalisation", "persYes": "Personalisation", "persErr": "Enter the text you would like added.", "charsWord": "characters", "stockIn": "In stock", "stockOut": "Out of stock, pre-order available", "buyBtn": "Buy now", "buyNote": "Secure payment by card, Apple Pay or Google Pay through Revolut. Illustration shown, every piece differs.", "orderBtn": "Order this piece", "orderNote": "Illustration shown, every piece differs.", "preorderBtn": "Pre-order request", "preorderNote": "This piece is being made. Send a request and I will confirm timing.", "pageNote": "Each piece is handmade, so no two are identical. Choose your shape, size and options, then order.", "aboutEyebrow": "About", "aboutTitle": "The maker", "aboutHello": "Hello, I’m {name}.", "followBtn": "Follow {handle}", "faqEyebrow": "FAQs", "faqTitle": "Questions", "faqIntro": "Answers to the questions we are asked most. If yours is not here, ask and we will get back to you.", "faqStill": "Still have a question?", "faqBtn": "Message {handle}", "contactEyebrow": "Contact", "emailLabel": "Email", "instaLabel": "Instagram", "emailBtn": "Email me", "formOrderTitle": "Order this piece", "formPreorderTitle": "Pre-order request", "formOrderLead": "Send your details and I will be in touch. Every piece is handmade, so there may be small differences from the illustration.", "formPreorderLead": "This piece is out of stock. Send your details and I will confirm when it can be made.", "fieldProduct": "Product", "fieldName": "Your name", "fieldEmail": "Email", "fieldNote": "Anything else", "sendOrder": "Send order", "sendPreorder": "Send pre-order request", "sending": "Sending", "errName": "Enter your name so I know who to reply to.", "errEmail": "Enter a valid email address so I can reply to you.", "errSend": "Your order did not send. Please try again, or message me on Instagram.", "doneTitle": "Order received", "doneText": "Thank you, your order has been received and I will be in touch.", "closeBtn": "Close"};
+  function X(k,r){var v=SITE&&SITE.text&&SITE.text[k];if(v==null||v==='')v=TXD[k];v=String(v==null?'':v);if(r)Object.keys(r).forEach(function(n){v=v.split('{'+n+'}').join(r[n]);});return v;}
+  function rangesOf(t){if(!t||!t.ranges)return [];var l=t.rangeList;return Array.isArray(l)&&l.length?RKEYS.filter(function(k){return l.indexOf(k)>-1;}):(Array.isArray(l)?[]:RKEYS);}
+  function rangeFor(t){var l=rangesOf(t);return l.indexOf(state.range)>-1?state.range:(l[0]||'ocean');}
+  function extraOf(t,st){var n=0;optsOf(t).forEach(function(o){var v=valOf(t,st,o);if(o.kind==='personalisation'){if(v==='yes')n+=+o.extra||0;}else{var c=(o.choices||[]).filter(function(c){return cv(c)===v;})[0];if(c)n+=+c.extra||0;}});return n;}
+
   var SITE=null,ORDER=[];
   var state={route:'home',range:'ocean'},sel={};
   var view=document.getElementById('view');
@@ -452,12 +459,12 @@ footer.site{margin-top:0}
   function parts(key){var a=key.split(':'),t=T(a[0]);return{t:t,s:t?t.shapes.filter(function(x){return x.id===a[1];})[0]:null};}
   function describe(key){
     var p=parts(key),st=selFor(key),size=p.s.sizes[st.size]||p.s.sizes[0],extra=[];
-    if(p.t.ranges)extra.push(RG(state.range).name+' range');
+    if(rangesOf(p.t).length)extra.push(RG(rangeFor(p.t)).name+' range');
     optsOf(p.t).forEach(function(o){
-      if(o.kind==='personalisation'){extra.push(valOf(p.t,st,o)==='yes'?(o.label||'Personalisation')+': "'+persText(st,o)+'"':'No personalisation');}
+      if(o.kind==='personalisation'){extra.push(valOf(p.t,st,o)==='yes'?(o.label||'Personalisation')+': "'+persText(st,o)+'"':X('noPers'));}
       else extra.push((o.label||o.id)+': '+choiceLabel(o,valOf(p.t,st,o)));
     });
-    return (size.stock==='out'?'PRE-ORDER REQUEST (out of stock). ':'')+p.t.short+', '+p.s.name+', '+size.label+(extra.length?'. '+extra.join('. '):'')+'. Guide price '+GBP(size.price)+'.';
+    return (size.stock==='out'?'PRE-ORDER REQUEST (out of stock). ':'')+p.t.short+', '+p.s.name+', '+size.label+(extra.length?'. '+extra.join('. '):'')+'. Guide price '+GBP(size.price+extraOf(p.t,st))+'.';
   }
 
   /* Netlify Image CDN resizes large uploads to a sensible width; falls back to the original file if the CDN is not available */
@@ -484,38 +491,39 @@ footer.site{margin-top:0}
   }
   function ph_tile(src,alt){return '<div class="tile photo"><img src="'+rs(src,900)+'"'+fb(src)+' alt="'+esc(alt)+'"></div>';}
   function finishLink(size,t,st){return edgeVal(t,st)==='clean'?(size.linkClean||''):(size.link||'');}
+  function noteHTML(x){return x.trim()?'<p class="note">'+esc(x)+'</p>':'';}
   function cardHTML(t,s){
     var key=t.key+':'+s.id,st=selFor(key);
     if(st.size>=s.sizes.length)st.size=0;
-    var size=s.sizes[st.size]||{label:'',price:0},rg=t.ranges?state.range:'ocean',fid='';
+    var size=s.sizes[st.size]||{label:'',price:0},rg=rangesOf(t).length?rangeFor(t):'ocean',fid='';
     var out=size.stock==='out';
-    var h='<article class="card" data-key="'+esc(key)+'"><div class="rbar '+(t.ranges?'bar-'+rg:'bar-brand')+'"></div>'+tileHTML(s,t,st,rg)+'<div class="body">';
-    h+='<div class="row"><h3>'+esc(s.name)+'</h3><p class="price">'+GBP(size.price)+'</p></div>';
+    var h='<article class="card" data-key="'+esc(key)+'"><div class="rbar '+(rangesOf(t).length?'bar-'+rg:'bar-brand')+'"></div>'+tileHTML(s,t,st,rg)+'<div class="body">';
+    h+='<div class="row"><h3>'+esc(s.name)+'</h3><p class="price">'+GBP(size.price+extraOf(t,st))+'</p></div>';
     h+='<div class="field"><span class="label">'+esc(t.sizeLabel||'Size')+'</span><div class="pills">';
-    s.sizes.forEach(function(z,i){h+='<button type="button" class="pill" data-size="'+i+'" aria-pressed="'+(i===st.size)+'">'+esc(z.label)+(z.stock==='out'?' (pre-order)':'')+'</button>';});
+    s.sizes.forEach(function(z,i){h+='<button type="button" class="pill" data-size="'+i+'" aria-pressed="'+(i===st.size)+'">'+esc(z.label)+(z.stock==='out'?X('preorderTag'):'')+'</button>';});
     h+='</div></div>';
     optsOf(t).forEach(function(o){
       var oid='o-'+t.key+'-'+s.id+'-'+o.id,v=valOf(t,st,o);
       if(o.kind==='personalisation'){
-        h+='<div class="field"><label for="'+oid+'">'+esc(o.label||'Personalisation')+'</label><select class="sel" id="'+oid+'" data-opt="'+esc(o.id)+'"><option value="none"'+(v==='none'?' selected':'')+'>No personalisation</option><option value="yes"'+(v==='yes'?' selected':'')+'>Personalisation</option></select></div>';
+        h+='<div class="field"><label for="'+oid+'">'+esc(o.label||'Personalisation')+'</label><select class="sel" id="'+oid+'" data-opt="'+esc(o.id)+'"><option value="none"'+(v==='none'?' selected':'')+'>'+esc(X('noPers'))+'</option><option value="yes"'+(v==='yes'?' selected':'')+'>'+esc(X('persYes')+(+o.extra>0?' (+'+GBP(+o.extra)+')':''))+'</option></select></div>';
         if(v==='yes'){
           var m=persMax(o),tx=persText(st,o);
-          h+='<div class="field pers"><label for="'+oid+'-t">'+esc(o.prompt||'Text to add')+'</label><input class="inp" id="'+oid+'-t" data-pers="'+esc(o.id)+'" maxlength="'+m+'" value="'+esc(tx)+'" autocomplete="off"><span class="cnt" id="'+oid+'-c">'+tx.length+' / '+m+' characters</span><p class="err" data-pers-err role="alert" hidden>Enter the text you would like added.</p></div>';
+          h+='<div class="field pers"><label for="'+oid+'-t">'+esc(o.prompt||'Text to add')+'</label><input class="inp" id="'+oid+'-t" data-pers="'+esc(o.id)+'" maxlength="'+m+'" value="'+esc(tx)+'" autocomplete="off"><span class="cnt" id="'+oid+'-c">'+tx.length+' / '+m+' '+esc(X('charsWord'))+'</span><p class="err" data-pers-err role="alert" hidden>'+esc(X('persErr'))+'</p></div>';
         }
       }else{
         h+='<div class="field"><label for="'+oid+'">'+esc(o.label||o.id)+'</label><select class="sel" id="'+oid+'" data-opt="'+esc(o.id)+'">';
-        (o.choices||[]).forEach(function(c){h+='<option value="'+esc(cv(c))+'"'+(cv(c)===v?' selected':'')+'>'+esc(c.label||c.value)+'</option>';});
+        (o.choices||[]).forEach(function(c){h+='<option value="'+esc(cv(c))+'"'+(cv(c)===v?' selected':'')+'>'+esc((c.label||c.value)+(+c.extra>0?' (+'+GBP(+c.extra)+')':''))+'</option>';});
         h+='</select></div>';
       }
     });
-    h+='<p><span class="stock'+(out?' out':'')+'">'+(out?'Out of stock, pre-order available':'In stock')+'</span></p>';
+    h+='<p><span class="stock'+(out?' out':'')+'">'+esc(out?X('stockOut'):X('stockIn'))+'</span></p>';
     var link=needsForm(t,st)?'':finishLink(size,t,st);
     if(out){
-      h+='<div class="actions"><button type="button" class="btn primary" data-req="preorder">Pre-order request</button></div><p class="note">This piece is being made. Send a request and we confirm timing and send a secure payment link.</p>';
+      h+='<div class="actions"><button type="button" class="btn primary" data-req="preorder">'+esc(X('preorderBtn'))+'</button></div>'+noteHTML(X('preorderNote'));
     }else if(link){
-      h+='<div class="actions"><a class="btn primary" href="'+esc(link)+'" target="_blank" rel="noopener">Buy now</a></div><p class="note">Secure payment by card, Apple Pay or Google Pay through Revolut. Illustration shown, every piece differs.</p>';
+      h+='<div class="actions"><a class="btn primary" href="'+esc(link)+'" target="_blank" rel="noopener">'+esc(X('buyBtn'))+'</a></div>'+noteHTML(X('buyNote'));
     }else{
-      h+='<div class="actions"><button type="button" class="btn primary" data-req="order">Order this piece</button></div><p class="note">We email you a secure payment link. Illustration shown, every piece differs.</p>';
+      h+='<div class="actions"><button type="button" class="btn primary" data-req="order">'+esc(X('orderBtn'))+'</button></div>'+noteHTML(X('orderNote'));
     }
     return h+'</div></article>';
   }
@@ -530,76 +538,83 @@ footer.site{margin-top:0}
     var main=I.hero?'<img class="cover" src="'+rs(I.hero,1400)+'"'+fb(I.hero)+' alt="Handmade boards with ocean resin waves">':'<div class="cover tile">'+art('board_round','ocean','resin')+'</div>';
     var corner=I.heroCorner?'<img class="a2" src="'+rs(I.heroCorner,700)+'"'+fb(I.heroCorner)+' alt="Close up of a board with a teal and white resin wave">':'';
     var h='<div class="hero"><div class="hero-copy"><p class="eyebrow">'+esc(H.eyebrow)+'</p><h1>'+esc(H.line1)+'<br><em>'+esc(H.line2)+'</em></h1><p class="lead">'+esc(H.lead)+'</p>'+
-      '<div class="cta"><a class="btn primary lg" href="#shop" data-go="shop">Shop the range</a></div></div>'+
+      '<div class="cta"><a class="btn primary lg" href="#shop" data-go="shop">'+esc(X('heroCta'))+'</a></div></div>'+
       '<div class="hero-art"><div class="frame">'+main+corner+'</div></div></div>';
     return '<section class="band hero-band">'+LOGO+'<div class="wrap">'+h+'</div></section>';
   }
   function homeHTML(){
     var h=heroHTML()+'<div class="stripe"></div>';
-    var types='<div class="sec-head"><div><p class="eyebrow">The shop</p><h2>Shop by product</h2></div><p>Choose a type of piece. Each comes in a choice of shapes and sizes.</p></div><div class="grid">';
-    ORDER.forEach(function(k){var t=T(k);types+='<a class="link-tile" href="#'+k+'" data-go="'+k+'"><div class="rbar bar-brand"></div>'+tileFor(t)+'<div class="tile-body"><h3>'+esc(t.name)+'</h3><p>'+esc(t.blurb)+'</p><span class="go">shop '+esc(t.name.toLowerCase())+'</span></div></a>';});
+    var types='<div class="sec-head"><div><p class="eyebrow">'+esc(X('homeShopEyebrow'))+'</p><h2>'+esc(X('homeShopTitle'))+'</h2></div><p>'+esc(X('homeShopText'))+'</p></div><div class="grid">';
+    ORDER.forEach(function(k){var t=T(k);types+='<a class="link-tile" href="#'+k+'" data-go="'+k+'"><div class="rbar bar-brand"></div>'+tileFor(t)+'<div class="tile-body"><h3>'+esc(t.name)+'</h3><p>'+esc(t.blurb)+'</p><span class="go">'+esc(X('goShop',{name:t.name.toLowerCase()}))+'</span></div></a>';});
     h+=plain(types+'</div>');
-    var rng='<div class="sec-head"><div><p class="eyebrow">Ranges</p><h2>Choose a range</h2></div><p>Pick a range, then choose the product type, shape and size.</p></div><div class="grid">';
-    var rkey=(visibleTypes().filter(function(t){return t.ranges;})[0]||{key:'shop'}).key;
-    RKEYS.forEach(function(k){rng+='<a class="link-tile" href="#'+rkey+'" data-go="'+rkey+'" data-range="'+k+'"><div class="rbar bar-'+k+'"></div>'+rangeTile(k)+'<div class="tile-body"><h3><span class="swatch sw-'+k+'"></span>'+esc(RG(k).name)+'</h3><p>'+esc(RG(k).blurb)+'</p><span class="go">see '+esc(RG(k).name.toLowerCase())+' pieces</span></div></a>';});
-    h+=band('blue',rng+'</div>');
+    var rng='<div class="sec-head"><div><p class="eyebrow">'+esc(X('homeRangesEyebrow'))+'</p><h2>'+esc(X('homeRangesTitle'))+'</h2></div><p>'+esc(X('homeRangesText'))+'</p></div><div class="grid">';
+    var rkey=(visibleTypes().filter(function(t){return rangesOf(t).length;})[0]||{key:'shop'}).key;
+    var offered=RKEYS.filter(function(k){return visibleTypes().some(function(t){return rangesOf(t).indexOf(k)>-1;});});
+    var rtype=function(k){return (visibleTypes().filter(function(t){return rangesOf(t).indexOf(k)>-1;})[0]||{key:rkey}).key;};
+    offered.forEach(function(k){rkey=rtype(k);rng+='<a class="link-tile" href="#'+rkey+'" data-go="'+rkey+'" data-range="'+k+'"><div class="rbar bar-'+k+'"></div>'+rangeTile(k)+'<div class="tile-body"><h3><span class="swatch sw-'+k+'"></span>'+esc(RG(k).name)+'</h3><p>'+esc(RG(k).blurb)+'</p><span class="go">'+esc(X('goRange',{range:RG(k).name.toLowerCase()}))+'</span></div></a>';});
+    if(offered.length)h+=band('blue',rng+'</div>');
     var O=SITE.ordering;
-    var ord='<div class="sec-head"><div><p class="eyebrow">Ordering</p><h2>'+esc(O.title)+'</h2></div><p>'+esc(O.intro)+'</p></div><div class="steps">';
-    O.steps.forEach(function(s,i){ord+='<div class="step"><span class="n">step '+(i+1)+'</span><h3>'+esc(s.title)+'</h3><p>'+rich(s.text)+'</p></div>';});
+    var ord='<div class="sec-head"><div><p class="eyebrow">'+esc(X('orderingEyebrow'))+'</p><h2>'+esc(O.title)+'</h2></div><p>'+esc(O.intro)+'</p></div><div class="steps">';
+    O.steps.forEach(function(s,i){ord+='<div class="step"><span class="n">'+esc(X('stepWord'))+' '+(i+1)+'</span><h3>'+esc(s.title)+'</h3><p>'+rich(s.text)+'</p></div>';});
     h+=band('teal',ord+'</div>');
-    var ed='<div class="sec-head"><div><p class="eyebrow">Every piece differs</p><h2>Resin edges or clean edges</h2></div><p>Choose resin edges or clean edges from the drop-down on any board or platter. You will see the choice in the product picture.</p></div><div class="compare">';
-    ed+='<div class="link-tile" style="cursor:default"><div class="rbar bar-brand"></div>'+(SITE.images.edgeResin?ph(SITE.images.edgeResin,'Side of a board showing resin running down the edge'):'<div class="tile">'+art('board_rect','ocean','resin')+'</div>')+'<div class="tile-body"><h3>Resin edges</h3><p>Resin runs down the sides as well as through the middle.</p></div></div>';
-    ed+='<div class="link-tile" style="cursor:default"><div class="rbar bar-brand"></div>'+(SITE.images.edgeClean?ph(SITE.images.edgeClean,'Board with natural timber edges and a resin wave at one end'):'<div class="tile">'+art('board_rect','ocean','clean')+'</div>')+'<div class="tile-body"><h3>Clean all round</h3><p>Timber edges all the way round, with the resin kept to the centre.</p></div></div>';
+    var ed='<div class="sec-head"><div><p class="eyebrow">'+esc(X('edgeEyebrow'))+'</p><h2>'+esc(X('edgeTitle'))+'</h2></div><p>'+esc(X('edgeText'))+'</p></div><div class="compare">';
+    ed+='<div class="link-tile" style="cursor:default"><div class="rbar bar-brand"></div>'+(SITE.images.edgeResin?ph(SITE.images.edgeResin,'Side of a board showing resin running down the edge'):'<div class="tile">'+art('board_rect','ocean','resin')+'</div>')+'<div class="tile-body"><h3>'+esc(X('resinTitle'))+'</h3><p>'+esc(X('resinText'))+'</p></div></div>';
+    ed+='<div class="link-tile" style="cursor:default"><div class="rbar bar-brand"></div>'+(SITE.images.edgeClean?ph(SITE.images.edgeClean,'Board with natural timber edges and a resin wave at one end'):'<div class="tile">'+art('board_rect','ocean','clean')+'</div>')+'<div class="tile-body"><h3>'+esc(X('cleanTitle'))+'</h3><p>'+esc(X('cleanText'))+'</p></div></div>';
     if(visibleTypes().some(function(t){return optsOf(t).some(function(o){return o.id==='edge';});}))h+=plain(ed+'</div>');
     return h;
   }
   function shopHTML(){
-    var h=band('page-band','<div class="page-head"><p class="eyebrow">The shop</p><h1>Shop</h1><p>Choose a type of piece. Each comes in a choice of shapes and sizes, and most come in the Ocean, Mountain and Lava ranges.</p></div>',LOGO);
+    var h=band('page-band','<div class="page-head"><p class="eyebrow">'+esc(X('shopEyebrow'))+'</p><h1>'+esc(X('shopTitle'))+'</h1><p>'+esc(X('shopText'))+'</p></div>',LOGO);
     var g='<div class="grid">';
-    ORDER.forEach(function(k){var t=T(k);g+='<a class="link-tile" href="#'+k+'" data-go="'+k+'"><div class="rbar bar-brand"></div>'+tileFor(t)+'<div class="tile-body"><h3>'+esc(t.name)+'</h3><p>'+esc(t.blurb)+'</p><span class="go">view '+t.shapes.length+' shape'+(t.shapes.length===1?'':'s')+'</span></div></a>';});
+    ORDER.forEach(function(k){var t=T(k);g+='<a class="link-tile" href="#'+k+'" data-go="'+k+'"><div class="rbar bar-brand"></div>'+tileFor(t)+'<div class="tile-body"><h3>'+esc(t.name)+'</h3><p>'+esc(t.blurb)+'</p><span class="go">'+esc(t.shapes.length===1?X('viewOne'):X('viewMany',{n:t.shapes.length}))+'</span></div></a>';});
     return h+'<div class="stripe"></div>'+plain(g+'</div>');
   }
   function typeHTML(k){
     var t=T(k);
-    var head='<nav class="crumbs" aria-label="Breadcrumb"><a href="#shop" data-go="shop">Shop</a><span aria-hidden="true">/</span><span>'+esc(t.name)+'</span></nav><div class="page-head" style="margin-top:18px"><p class="eyebrow">Shop</p><h1>'+esc(t.name)+'</h1><p>'+esc(t.blurb)+'</p>'+typeNav(k)+'</div>';
+    var head='<nav class="crumbs" aria-label="Breadcrumb"><a href="#shop" data-go="shop">'+esc(X('crumbShop'))+'</a><span aria-hidden="true">/</span><span>'+esc(t.name)+'</span></nav><div class="page-head" style="margin-top:18px"><p class="eyebrow">'+esc(X('typeEyebrow'))+'</p><h1>'+esc(t.name)+'</h1><p>'+esc(t.blurb)+'</p>'+typeNav(k)+'</div>';
     var h=band('page-band',head,LOGO)+'<div class="stripe"></div><div class="wrap body-pad"><div class="toolbar">';
-    if(t.ranges){
-      h+='<div class="field"><span class="label">Range</span><div class="pills">';
-      RKEYS.forEach(function(r){h+='<button type="button" class="pill" data-range-pick="'+r+'" aria-pressed="'+(r===state.range)+'"><span class="swatch sw-'+r+'"></span>'+esc(RG(r).name)+'</button>';});
-      h+='</div><p class="range-note">'+esc(RG(state.range).blurb)+'</p></div>';
+    if(rangesOf(t).length>1){
+      h+='<div class="field"><span class="label">'+esc(X('rangeLabel'))+'</span><div class="pills">';
+      rangesOf(t).forEach(function(r){h+='<button type="button" class="pill" data-range-pick="'+r+'" aria-pressed="'+(r===rangeFor(t))+'"><span class="swatch sw-'+r+'"></span>'+esc(RG(r).name)+'</button>';});
+      h+='</div><p class="range-note">'+esc(RG(rangeFor(t)).blurb)+'</p></div>';
     }
     h+='</div><div class="grid products" id="products">'+t.shapes.map(function(s){return cardHTML(t,s);}).join('')+'</div>';
-    h+='<div class="note-box">Each piece is handmade, so no two are identical. Choose your shape, size and options, then order. We email you a secure payment link and post your piece once it is paid.</div></div>';
+    if(X('pageNote').trim())h+='<div class="note-box">'+esc(X('pageNote'))+'</div>';h+='</div>';
     return h;
   }
   function aboutHTML(){
     var p=SITE.about.photo;
     var photo=p?'<div class="portrait has" style="background-image:url(\''+rs(p,900)+'\')" role="img" aria-label="Photo of '+esc(SITE.about.name)+'"></div>':
       '<div class="portrait"><div class="portrait-ph"><span class="label">Photo of '+esc(firstName())+' goes here</span></div></div>';
-    var h='<div class="wrap body-pad"><section class="about" style="padding-block:clamp(44px,7vw,92px) 0"><div>'+photo+'<p class="cap">'+esc(SITE.about.name)+'</p></div><div class="about-copy"><p class="eyebrow">About</p><h1>Hello, I’m '+esc(firstName())+'.</h1>'+
+    var h='<div class="wrap body-pad"><section class="about" style="padding-block:clamp(44px,7vw,92px) 0"><div>'+photo+'<p class="cap">'+esc(SITE.about.name)+'</p></div><div class="about-copy"><p class="eyebrow">'+esc(X('aboutEyebrow'))+'</p><h1>'+esc(X('aboutHello',{name:firstName()}))+'</h1>'+
       '<p>'+rich(SITE.about.p1)+'</p><p>'+rich(SITE.about.p2)+'</p><p>'+rich(SITE.about.p3)+'</p>'+
-      '<div class="cta"><a class="btn primary" href="#shop" data-go="shop">Shop the range</a><a class="btn" href="'+igUrl()+'" target="_blank" rel="noopener">Follow '+esc(igText())+'</a></div></div></section></div>';
-    return band('page-band','<div class="page-head"><p class="eyebrow">About</p><h2 style="font-size:clamp(1.9rem,4.4vw,3rem)">The maker</h2></div>',LOGO)+'<div class="stripe"></div>'+h;
+      '<div class="cta"><a class="btn primary" href="#shop" data-go="shop">'+esc(X('heroCta'))+'</a><a class="btn" href="'+igUrl()+'" target="_blank" rel="noopener">'+esc(X('followBtn',{handle:igText()}))+'</a></div></div></section></div>';
+    return band('page-band','<div class="page-head"><p class="eyebrow">'+esc(X('aboutEyebrow'))+'</p><h2 style="font-size:clamp(1.9rem,4.4vw,3rem)">'+esc(X('aboutTitle'))+'</h2></div>',LOGO)+'<div class="stripe"></div>'+h;
   }
   function faqsHTML(){
-    var head='<div class="page-head"><p class="eyebrow">FAQs</p><h1>Questions</h1><p>Answers to the questions we are asked most. If yours is not here, ask and we will get back to you.</p></div>';
+    var head='<div class="page-head"><p class="eyebrow">'+esc(X('faqEyebrow'))+'</p><h1>'+esc(X('faqTitle'))+'</h1><p>'+esc(X('faqIntro'))+'</p></div>';
     var list='<div class="faq">'+SITE.faqs.map(function(f){return '<details><summary>'+esc(f.q)+'</summary><div class="ans">'+rich(f.a)+'</div></details>';}).join('')+'</div>';
-    var cta='<div class="faq-cta"><h3>Still have a question?</h3><div class="cta"><a class="btn primary" href="'+igUrl()+'" target="_blank" rel="noopener">Message '+esc(igText())+'</a></div></div>';
+    var cta='<div class="faq-cta"><h3>'+esc(X('faqStill'))+'</h3><div class="cta"><a class="btn primary" href="'+igUrl()+'" target="_blank" rel="noopener">'+esc(X('faqBtn',{handle:igText()}))+'</a></div></div>';
     return band('page-band',head,LOGO)+'<div class="stripe"></div><div class="wrap body-pad"><div style="padding-top:clamp(28px,5vw,56px)">'+list+cta+'</div></div>';
   }
   function mailLink(cls){var e=SITE.brand.email;return e?'<a class="'+cls+'" href="mailto:'+esc(e)+'">'+esc(e)+'</a>':'<span class="ph">[Email address to be added]</span>';}
   function contactHTML(){
     var C=SITE.contact||{};
-    var head='<div class="page-head"><p class="eyebrow">Contact</p><h1>'+esc(C.title||'Contact me')+'</h1><p>'+esc(C.intro||'')+'</p></div>';
-    var body='<div class="contact-card"><div><span class="label">Email</span><p class="big">'+mailLink('maillink')+'</p></div>'+
-      '<div><span class="label">Instagram</span><p class="big"><a class="maillink" href="'+igUrl()+'" target="_blank" rel="noopener">'+esc(igText())+'</a></p></div>'+
+    var head='<div class="page-head"><p class="eyebrow">'+esc(X('contactEyebrow'))+'</p><h1>'+esc(C.title||'Contact me')+'</h1><p>'+esc(C.intro||'')+'</p></div>';
+    var body='<div class="contact-card"><div><span class="label">'+esc(X('emailLabel'))+'</span><p class="big">'+mailLink('maillink')+'</p></div>'+
+      '<div><span class="label">'+esc(X('instaLabel'))+'</span><p class="big"><a class="maillink" href="'+igUrl()+'" target="_blank" rel="noopener">'+esc(igText())+'</a></p></div>'+
       (C.note?'<p class="muted">'+rich(C.note)+'</p>':'')+
-      '<div class="cta">'+(SITE.brand.email?'<a class="btn primary" href="mailto:'+esc(SITE.brand.email)+'">Email me</a>':'')+'<a class="btn" href="#shop" data-go="shop">Shop the range</a></div></div>';
+      '<div class="cta">'+(SITE.brand.email?'<a class="btn primary" href="mailto:'+esc(SITE.brand.email)+'">'+esc(X('emailBtn'))+'</a>':'')+'<a class="btn" href="#shop" data-go="shop">'+esc(X('heroCta'))+'</a></div></div>';
     return band('page-band',head,LOGO)+'<div class="stripe"></div><div class="wrap body-pad"><div style="padding-top:clamp(28px,5vw,56px)">'+body+'</div></div>';
   }
   function renderChrome(){
     document.getElementById('brand-name').textContent=SITE.brand.name;
-    var f=document.getElementById('foot-insta');f.href=igUrl();f.textContent='Instagram '+igText();
+    var f=document.getElementById('foot-insta');f.href=igUrl();f.textContent=X('footInsta')+' '+igText();
+    var NM={home:'navHome',shop:'navShop',about:'navAbout',faqs:'navFaqs',contact:'navContact'};
+    document.querySelectorAll('header.site nav a[data-go],footer.site nav a[data-go]').forEach(function(a){if(NM[a.dataset.go])a.textContent=X(NM[a.dataset.go]);});
+    var L=function(sel,k){var e=document.querySelector(sel);if(e)e.textContent=X(k);};
+    L('label[for=rq-item]','fieldProduct');L('label[for=rq-name]','fieldName');L('label[for=rq-email]','fieldEmail');L('label[for=rq-note]','fieldNote');
+    L('#rq-done h3','doneTitle');L('#rq-done p','doneText');L('#rq-done button','closeBtn');
     var fm=document.getElementById('foot-mail');if(fm){if(SITE.brand.email){fm.href='mailto:'+SITE.brand.email;fm.textContent=SITE.brand.email;fm.style.display='';}else fm.style.display='none';}
   }
   function render(){
@@ -629,9 +644,9 @@ footer.site{margin-top:0}
   var lastFocus=null,modal=document.getElementById('modal');
   function openModal(text,kind){
     kind=kind==='preorder'?'preorder':'order';modal.dataset.kind=kind;
-    document.getElementById('m-title').textContent=kind==='preorder'?'Pre-order request':'Order this piece';
-    document.getElementById('rq-send').textContent=kind==='preorder'?'Send pre-order request':'Send order';
-    document.getElementById('rq-lead').textContent=kind==='preorder'?'This piece is out of stock. Send your details and we will confirm when it can be made, then email you a secure payment link.':'Send your details and we will email you a secure payment link. Every piece is handmade, so there may be small differences from the illustration.';
+    document.getElementById('m-title').textContent=kind==='preorder'?X('formPreorderTitle'):X('formOrderTitle');
+    document.getElementById('rq-send').textContent=kind==='preorder'?X('sendPreorder'):X('sendOrder');
+    document.getElementById('rq-lead').textContent=kind==='preorder'?X('formPreorderLead'):X('formOrderLead');
     lastFocus=document.activeElement;
     document.getElementById('rq-item').value=text;
     document.getElementById('rq-err').hidden=true;
@@ -679,17 +694,17 @@ footer.site{margin-top:0}
   document.getElementById('reqForm').addEventListener('submit',function(e){
     e.preventDefault();
     var name=document.getElementById('rq-name').value.trim(),mail=document.getElementById('rq-email').value.trim(),err=document.getElementById('rq-err'),btn=document.getElementById('rq-send');
-    if(!name){err.textContent='Enter your name so we know who to reply to.';err.hidden=false;document.getElementById('rq-name').focus();return;}
-    if(!/^\S+@\S+\.\S+$/.test(mail)){err.textContent='Enter a valid email address so we can send your payment link.';err.hidden=false;document.getElementById('rq-email').focus();return;}
-    err.hidden=true;btn.disabled=true;btn.textContent='Sending';
+    if(!name){err.textContent=X('errName');err.hidden=false;document.getElementById('rq-name').focus();return;}
+    if(!/^\S+@\S+\.\S+$/.test(mail)){err.textContent=X('errEmail');err.hidden=false;document.getElementById('rq-email').focus();return;}
+    err.hidden=true;btn.disabled=true;btn.textContent=X('sending');
     var body=new URLSearchParams({'form-name':'order','bot-field':'',kind:modal.dataset.kind||'order',name:name,email:mail,item:document.getElementById('rq-item').value,
       note:document.getElementById('rq-note').value});
     fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:body.toString()}).then(function(r){
       if(!r.ok)throw new Error('bad');
       document.getElementById('reqForm').hidden=true;document.getElementById('rq-done').hidden=false;document.getElementById('reqForm').reset();
     }).catch(function(){
-      err.textContent='Your order did not send. Please try again, or message us on Instagram.';err.hidden=false;
-    }).then(function(){btn.disabled=false;btn.textContent=modal.dataset.kind==='preorder'?'Send pre-order request':'Send order';});
+      err.textContent=X('errSend');err.hidden=false;
+    }).then(function(){btn.disabled=false;btn.textContent=modal.dataset.kind==='preorder'?X('sendPreorder'):X('sendOrder');});
   });
   window.addEventListener('hashchange',function(){var h=location.hash.slice(1);if(SITE&&routeOK(h)&&h!==state.route){state.route=h;render();window.scrollTo(0,0);}});
 
