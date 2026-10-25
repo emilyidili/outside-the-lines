@@ -53,11 +53,11 @@
     },
     "sunset": {
       "name": "Sunset",
-      "blurb": "Orangey blah blah"
+      "blurb": "oranges, golds and bronzes to give that gorgeous cozy sunset feel."
     }
   },
   "images": {
-    "hero": "img/trio.jpg",
+    "hero": "/img/uploads/front-imagetif.jpg",
     "heroCorner": "img/detail.jpg",
     "ocean": "img/board.jpg",
     "mountain": "",
