@@ -161,14 +161,14 @@
             {
               "label": "35cm",
               "price": 115,
-              "stock": "in",
+              "stock": "out",
               "link": "",
               "linkClean": ""
             },
             {
               "label": "50cm",
               "price": 150,
-              "stock": "in",
+              "stock": "out",
               "link": "",
               "linkClean": ""
             }
