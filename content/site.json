@@ -50,6 +50,10 @@
     "lava": {
       "name": "Lava",
       "blurb": "Beautiful reds, blacks and golds."
+    },
+    "sunset": {
+      "name": "Sunset",
+      "blurb": "Orangey blah blah"
     }
   },
   "images": {
