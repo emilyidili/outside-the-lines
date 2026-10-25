@@ -64,6 +64,7 @@
   "types": [
     {
       "tileKind": "board_long",
+      "hidden": false,
       "name": "Serving boards with handles",
       "tileRange": "ocean",
       "shapes": [
@@ -113,10 +114,10 @@
         }
       ],
       "photo": "img/detail.jpg",
+      "sizeLabel": "Size",
       "ranges": true,
       "blurb": "Olive wood boards with a handle, in irregular and round shapes in two different sizes.",
       "short": "Serving board",
-      "key": "boards",
       "options": [
         {
           "id": "edge",
@@ -144,11 +145,11 @@
           "maxLength": 40
         }
       ],
-      "hidden": false,
-      "sizeLabel": "Size"
+      "key": "boards"
     },
     {
       "tileKind": "platter_oval",
+      "hidden": false,
       "name": "Serving platters",
       "tileRange": "ocean",
       "shapes": [
@@ -198,10 +199,10 @@
         }
       ],
       "photo": "img/trio.jpg",
+      "sizeLabel": "Size",
       "ranges": true,
       "blurb": "Larger platters for sharing, in irregular and rustic shapes.",
       "short": "Serving platter",
-      "key": "platters",
       "options": [
         {
           "id": "edge",
@@ -229,11 +230,11 @@
           "maxLength": 40
         }
       ],
-      "hidden": false,
-      "sizeLabel": "Size"
+      "key": "platters"
     },
     {
       "tileKind": "coaster_round",
+      "hidden": false,
       "name": "Coasters",
       "tileRange": "ocean",
       "shapes": [
@@ -254,10 +255,10 @@
         }
       ],
       "photo": "",
+      "sizeLabel": "Quantity",
       "ranges": true,
       "blurb": "These beautiful coasters are sold in sets of four, with all the texture and feel of the resin but a smooth flat surface to ensure your glass doesn't topple!",
       "short": "Coasters",
-      "key": "coasters",
       "options": [
         {
           "id": "edge",
@@ -285,11 +286,11 @@
           "maxLength": 40
         }
       ],
-      "hidden": false,
-      "sizeLabel": "Quantity"
+      "key": "coasters"
     },
     {
       "tileKind": "glass_stem",
+      "hidden": false,
       "name": "Wine glasses",
       "tileRange": "ocean",
       "shapes": [
@@ -335,10 +336,10 @@
         }
       ],
       "photo": "",
+      "sizeLabel": "Quantity",
       "ranges": false,
       "blurb": "Hand finished wine glasses, stemmed or stemless.",
       "short": "Wine glass",
-      "key": "glasses",
       "options": [
         {
           "id": "wine",
@@ -366,12 +367,11 @@
           "maxLength": 40
         }
       ],
-      "hidden": false,
-      "sizeLabel": "Quantity"
+      "key": "glasses"
     }
   ],
   "hero": {
-    "eyebrow": "Handmade in olive wood and resin",
+    "eyebrow": "Handmade with love in Dorset",
     "line1": "Made by hand.",
     "line2": "Never the same twice.",
     "lead": "Beautiful serving boards, platters, coasters and wine glasses in Ocean, Mountain and Lava ranges. Choose an item, the range and your edge finish and rest assured no one will ever have another piece like it."
