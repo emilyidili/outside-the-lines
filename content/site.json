@@ -58,7 +58,7 @@
   },
   "images": {
     "hero": "/img/uploads/front-imagetif.jpg",
-    "heroCorner": "img/detail.jpg",
+    "heroCorner": "/img/uploads/small-irregular-handle-board.jpg",
     "ocean": "img/board.jpg",
     "mountain": "",
     "lava": "",
