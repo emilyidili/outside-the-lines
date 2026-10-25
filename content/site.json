@@ -281,7 +281,7 @@
           "id": "personalise",
           "label": "Personalisation",
           "kind": "personalisation",
-          "enabled": true,
+          "enabled": false,
           "choices": [],
           "maxLength": 40
         }
