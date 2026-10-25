@@ -302,13 +302,13 @@
             {
               "label": "Single glass",
               "price": 24,
-              "stock": "in",
+              "stock": "out",
               "link": ""
             },
             {
               "label": "Pair",
               "price": 44,
-              "stock": "in",
+              "stock": "out",
               "link": ""
             }
           ],
