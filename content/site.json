@@ -62,7 +62,7 @@
     "ocean": "/img/uploads/ocean_platter_small.jpg",
     "mountain": "/img/uploads/mountain_platter_medium.jpg",
     "lava": "",
-    "edgeResin": "img/edge.jpg",
+    "edgeResin": "/img/uploads/ocean_resin_edge.jpg",
     "edgeClean": "/img/uploads/ocean_clean_edge.jpg",
     "sunset": "/img/uploads/sunset_platter_small.jpg"
   },
