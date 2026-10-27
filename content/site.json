@@ -63,7 +63,7 @@
     "mountain": "/img/uploads/mountain_platter_medium.jpg",
     "lava": "",
     "edgeResin": "img/edge.jpg",
-    "edgeClean": "img/board.jpg",
+    "edgeClean": "/img/uploads/ocean_clean_edge.jpg",
     "sunset": "/img/uploads/sunset_platter_small.jpg"
   },
   "types": [
