@@ -93,7 +93,21 @@
               "linkClean": ""
             }
           ],
-          "photos": []
+          "photos": [
+            {
+              "finish": "any",
+              "src": "/img/uploads/ocean_irregular_handle_large.jpg",
+              "label": ""
+            },
+            {
+              "finish": "any",
+              "src": "/img/uploads/small-irregular-handle-board.jpg"
+            },
+            {
+              "finish": "any",
+              "src": "/img/uploads/ocean_irregular_handle_large_handle.jpg"
+            }
+          ]
         },
         {
           "id": "round",
