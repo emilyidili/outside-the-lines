@@ -129,7 +129,12 @@
               "linkClean": ""
             }
           ],
-          "photos": []
+          "photos": [
+            {
+              "finish": "any",
+              "src": "/img/uploads/ocean_round_handle_large.jpg"
+            }
+          ]
         }
       ],
       "photo": "/img/uploads/ocean_irregular_handle_large.jpg",
