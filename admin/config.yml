@@ -96,6 +96,11 @@ collections:
               - { label: Sunset range photo, name: sunset, widget: image, required: false }
               - { label: Resin edge photo, name: edgeResin, widget: image, required: false }
               - { label: Clean edge photo, name: edgeClean, widget: image, required: false }
+          - label: Basket
+            name: shop
+            widget: object
+            fields:
+              - { label: Use the basket and checkout (untick to go back to the order form), name: basket, widget: boolean, default: true, required: false }
           - label: All other wording (buttons, headings, notes, messages)
             name: text
             widget: object
@@ -178,6 +183,10 @@ collections:
               - { label: "Order sent: title", name: doneTitle, widget: string, required: false }
               - { label: "Order sent: text", name: doneText, widget: text, required: false }
               - { label: "Order sent: close button", name: closeBtn, widget: string, required: false }
+              - { label: "Menu: basket label", name: basketBtn, widget: string, required: false }
+              - { label: "Button: add to basket", name: addBtn, widget: string, required: false }
+              - { label: "Note under Add to basket", name: addNote, widget: string, required: false }
+              - { label: "Message if the basket fails to open", name: addedErr, widget: string, required: false }
           - label: Shop product groups (add, hide or remove groups here)
             name: types
             widget: list
@@ -241,8 +250,9 @@ collections:
                       - { label: Size, name: label, widget: string }
                       - { label: Price in pounds, name: price, widget: number, value_type: int }
                       - { label: Stock, name: stock, widget: select, options: [{label: In stock, value: in}, {label: Out of stock (pre-order), value: out}], default: in }
-                      - { label: Revolut payment link (resin edges, or the only option), name: link, widget: string, required: false }
-                      - { label: Revolut payment link for clean edges, name: linkClean, widget: string, required: false }
+                      - { label: Postage weight in grams (used for weight based postage), name: weight, widget: number, value_type: int, required: false }
+                      - { label: Revolut payment link (not used with the basket), name: link, widget: string, required: false }
+                      - { label: Revolut payment link for clean edges (not used with the basket), name: linkClean, widget: string, required: false }
           - label: FAQs
             name: faqs
             widget: list

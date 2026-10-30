@@ -50,3 +50,12 @@ Order-form route:
 - Each product group has "Ranges available for this group". Untick a range to turn it off for that group. If only one range is left the picker is hidden. The home page only shows ranges that at least one visible group offers.
 - "All other wording" in the CMS holds every button, heading, note and message on the site. Fields left blank fall back to the original wording.
 - Options and choices have an optional "Extra price" which is added to the displayed price.
+
+## Basket and checkout (Snipcart)
+
+- Every in-stock product has Add to basket. Out-of-stock sizes keep the Pre-order request form (sent through Netlify Forms).
+- products.json is rebuilt from content/site.json on every Netlify deploy (build-products.js). Snipcart uses it to check prices, so a price edit in the CMS takes effect after the next deploy finishes.
+- Extra prices on options and personalisation are applied in the basket. Personalisation text is shown on the order in Snipcart.
+- Postage, tax and payments are set in the Snipcart dashboard. Postage weight per size is optional in the CMS.
+- To turn the basket off and go back to the order form, untick Basket in the CMS.
+- The Snipcart public API key is in the head of index.html. Never put the secret key in the repo.

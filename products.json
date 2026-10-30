@@ -1,0 +1,67 @@
+[
+  {
+    "id": "boards--irregular--35cm",
+    "price": 70,
+    "url": "/products.json"
+  },
+  {
+    "id": "boards--irregular--45cm",
+    "price": 125,
+    "url": "/products.json"
+  },
+  {
+    "id": "boards--round--33cm",
+    "price": 115,
+    "url": "/products.json"
+  },
+  {
+    "id": "boards--round--46cm",
+    "price": 150,
+    "url": "/products.json"
+  },
+  {
+    "id": "platters--irregular--35cm",
+    "price": 115,
+    "url": "/products.json"
+  },
+  {
+    "id": "platters--irregular--50cm",
+    "price": 150,
+    "url": "/products.json"
+  },
+  {
+    "id": "platters--rustic--30cm",
+    "price": 70,
+    "url": "/products.json"
+  },
+  {
+    "id": "platters--rustic--45cm",
+    "price": 125,
+    "url": "/products.json"
+  },
+  {
+    "id": "coasters--round--set-of-4",
+    "price": 50,
+    "url": "/products.json"
+  },
+  {
+    "id": "glasses--stem--single-glass",
+    "price": 24,
+    "url": "/products.json"
+  },
+  {
+    "id": "glasses--stem--pair",
+    "price": 44,
+    "url": "/products.json"
+  },
+  {
+    "id": "glasses--stemless--single-glass",
+    "price": 20,
+    "url": "/products.json"
+  },
+  {
+    "id": "glasses--stemless--pair",
+    "price": 36,
+    "url": "/products.json"
+  }
+]
