@@ -144,6 +144,10 @@
       "sizeLabel": "Size",
       "ranges": true,
       "blurb": "Olive wood boards with a handle, in irregular and round shapes in two different sizes.",
+      "rangeList": [
+        "ocean",
+        "sunset"
+      ],
       "short": "Serving board",
       "options": [
         {
