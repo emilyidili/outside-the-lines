@@ -56,6 +56,9 @@
       "blurb": "oranges, golds and bronzes to give that gorgeous cozy sunset feel."
     }
   },
+  "shop": {
+    "basket": true
+  },
   "images": {
     "hero": "/img/uploads/front-imagetif.jpg",
     "heroCorner": "/img/uploads/small-irregular-handle-board.jpg",
