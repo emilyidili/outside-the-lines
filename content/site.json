@@ -136,6 +136,14 @@
             {
               "finish": "any",
               "src": "/img/uploads/ocean_round_handle_large.jpg"
+            },
+            {
+              "finish": "any",
+              "src": "/img/uploads/ocean_round_handle_large_2.jpg"
+            },
+            {
+              "finish": "any",
+              "src": "/img/uploads/ocean_round_handle_small.jpg"
             }
           ]
         }
