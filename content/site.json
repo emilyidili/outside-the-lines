@@ -330,7 +330,7 @@
     },
     {
       "tileKind": "glass_stem",
-      "hidden": false,
+      "hidden": true,
       "name": "Wine glasses",
       "tileRange": "ocean",
       "shapes": [
