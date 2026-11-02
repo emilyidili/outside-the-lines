@@ -83,14 +83,14 @@
           "sizes": [
             {
               "label": "35cm",
-              "price": 70,
-              "stock": "in",
+              "price": 115,
+              "stock": "out",
               "link": "",
               "linkClean": ""
             },
             {
               "label": "45cm",
-              "price": 125,
+              "price": 150,
               "stock": "out",
               "link": "",
               "linkClean": ""
