@@ -206,7 +206,7 @@
             },
             {
               "label": "50cm",
-              "price": 150,
+              "price": 175,
               "stock": "out",
               "link": "",
               "linkClean": ""
@@ -241,6 +241,7 @@
       "sizeLabel": "Size",
       "ranges": true,
       "blurb": "Larger platters for sharing, in irregular and rustic shapes.",
+      "rangeList": null,
       "short": "Serving platter",
       "options": [
         {
