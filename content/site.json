@@ -290,7 +290,12 @@
               "linkClean": ""
             }
           ],
-          "photos": []
+          "photos": [
+            {
+              "finish": "any",
+              "src": "/img/uploads/ocean_coasters_scattered.jpg"
+            }
+          ]
         }
       ],
       "photo": "/img/uploads/ocean_coasters_scattered.jpg",
