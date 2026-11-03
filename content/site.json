@@ -211,7 +211,12 @@
               "linkClean": ""
             }
           ],
-          "photos": []
+          "photos": [
+            {
+              "finish": "any",
+              "src": "/img/uploads/ocean_irregular_platter_large.jpg"
+            }
+          ]
         },
         {
           "id": "rustic",
@@ -233,7 +238,12 @@
               "linkClean": ""
             }
           ],
-          "photos": []
+          "photos": [
+            {
+              "finish": "any",
+              "src": "/img/uploads/ocean_platter_large.jpg"
+            }
+          ]
         }
       ],
       "photo": "/img/uploads/ocean_platter_large.jpg",
